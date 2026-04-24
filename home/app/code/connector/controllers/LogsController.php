@@ -345,7 +345,7 @@ class LogsController extends Controller
                             $result .= '<div class="col-8 border-dark border-top bg-warning">Something went wrong</div>';
                         }
 
-                        echo $result;
+                        // echo $result;
                     }
                 }
             }
@@ -446,7 +446,7 @@ class LogsController extends Controller
                         }
 
                         if ($result != "") {
-                            echo $result;
+                            // echo $result;
                         }
                     }
                 }
@@ -590,7 +590,7 @@ class LogsController extends Controller
                     $result .=  '<div class="col-8 bg-warning">In complete cancellation process!! => ' . $processData[count($processData) - 3] . '</div>';
                 }
 
-                echo $result;
+                // echo $result;
             }
         }
 
@@ -664,7 +664,7 @@ class LogsController extends Controller
                     }
                 }
 
-                echo $result;
+                // echo $result;
             }
         }
 
@@ -739,7 +739,7 @@ class LogsController extends Controller
 
         echo '<pre>';
         while (!feof($handle)) {
-            print fread($handle, $chunkSize);
+            // print fread($handle, $chunkSize);
             ob_flush();
             flush();
         }
