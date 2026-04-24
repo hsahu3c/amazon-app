@@ -642,7 +642,7 @@ class RemoveStaleUsersCommand extends Command
 
         $res = $this->setDiForUser($userId);
         if (!$res['success']) {
-            echo $res['message'];
+            // echo $res['message'];
             return;
         }
 
@@ -668,7 +668,7 @@ class RemoveStaleUsersCommand extends Command
 
         $res = $this->setDiForUser($userId);
         if (!$res['success']) {
-            echo $res['message'];
+            // echo $res['message'];
             return;
         }
 

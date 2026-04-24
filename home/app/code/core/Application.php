@@ -135,7 +135,7 @@ class Application extends \Phalcon\Mvc\Application
         try {
             $this->di->getLog()->logContent($msg, $type, $file);
         } catch (\Phalcon\Mvc\Model\Transaction\Failed $e) {
-            echo $e->getMessage();
+            // echo $e->getMessage();
         }
     }
 

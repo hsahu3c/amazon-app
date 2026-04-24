@@ -453,7 +453,7 @@ class Helper extends Common
             ]);
             $status = $queuedTask->save();
         } catch (Exception $e){
-            echo $e->getMessage();
+            // echo $e->getMessage();
         }
 
         $handlerData = [
@@ -486,7 +486,7 @@ class Helper extends Common
             ]);
             $status = $queuedTask->save();
         } catch (Exception $e){
-            echo $e->getMessage();
+            // echo $e->getMessage();
         }
 
         $handlerData = [

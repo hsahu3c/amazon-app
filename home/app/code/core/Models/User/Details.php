@@ -401,7 +401,7 @@ class Details extends \App\Core\Models\BaseMongo
                 ];
             }
         } catch (\Exception $e) {
-            echo $e->getMessage();
+            // echo $e->getMessage();
             die;
             return ['success' => false, 'message' => 'Something went wrong', 'code' => 'unknown_exception'];
         }

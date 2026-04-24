@@ -2659,7 +2659,7 @@ class ProductContainer extends BaseMongo
             $pData = $collection->aggregate($aggragation)->toArray();
             return ['success' => true, 'data' => $pData, 'param' => $params, 'query' => $aggragation];
         } catch (\Exception $e) {
-            echo $e->getMessage();
+            // echo $e->getMessage();
             die;
         }
     }

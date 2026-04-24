@@ -316,7 +316,7 @@ class ExportUnlinkedProduct extends base
 
             return (string)$request->getUri();
         } catch (\Exception $e) {
-            echo "There was an error uploading the file: " . $e->getMessage() . "\n";
+            // echo "There was an error uploading the file: " . $e->getMessage() . "\n";
             return null;
         }
     }

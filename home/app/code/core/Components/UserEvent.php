@@ -93,7 +93,7 @@ class UserEvent extends \App\Core\Components\Base
 
             );
         } catch (\Exception $e) {
-            echo $e->getMessage();
+            // echo $e->getMessage();
         }
     }
 
@@ -161,7 +161,7 @@ class UserEvent extends \App\Core\Components\Base
                 ]
             );
         } catch (\Exception $e) {
-            echo $e->getMessage();
+            // echo $e->getMessage();
         }
     }
 }

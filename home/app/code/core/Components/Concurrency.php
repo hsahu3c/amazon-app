@@ -29,7 +29,7 @@ trait Concurrency
                     try {
                         //$this->di->getLog()->logContent('open lock for code: ' . $code . ' count ' . $count, 'info', 'locks.log');
                     } catch (\Exception $e) {
-                        echo $e->getMessage();
+                        // echo $e->getMessage();
                     }
                     $gotTheLock = true;
                     break;

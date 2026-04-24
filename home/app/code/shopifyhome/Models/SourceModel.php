@@ -319,7 +319,7 @@ class SourceModel extends BaseSourceModel
             ]);
             $status = $queuedTask->save();
         } catch (Exception $e) {
-            echo $e->getMessage();
+            // echo $e->getMessage();
         }
 
         $handlerData = [

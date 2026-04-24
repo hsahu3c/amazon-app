@@ -297,11 +297,11 @@ class Sheet extends Base
                         try {
                             $accountExist->$key = 'N/A';
                         } catch (Exception $e ){
-                            echo $e->getMessage();
+                            // echo $e->getMessage();
                         }
                     }
                 }catch (Exception $e ){
-                    echo $e->getMessage();
+                    // echo $e->getMessage();
                 }
             }
             

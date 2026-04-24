@@ -11,7 +11,7 @@ class Schema extends \App\Core\Components\Base
         try {
             $this->up($di, $moduleName, $currentVersion);
         } catch (\Exception $exception) {
-            echo $exception->getMessage();
+            // echo $exception->getMessage();
             PHP_EOL;
             die;
         }
@@ -76,7 +76,7 @@ class Schema extends \App\Core\Components\Base
             } catch (\Exception $exception) {
 
 
-                echo $exception->getMessage();
+                // echo $exception->getMessage();
                 PHP_EOL;
                 die;
             }
@@ -104,7 +104,7 @@ class Schema extends \App\Core\Components\Base
                 $connection->commit();
             } catch (\Exception $exception) {
                 $connection->rollback();
-                echo $exception->getMessage() . PHP_EOL;
+                // echo $exception->getMessage() . PHP_EOL;
                 die;
             }
         }
