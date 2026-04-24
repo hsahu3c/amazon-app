@@ -84,7 +84,7 @@ class User extends BaseMongo
                 }
 
                 $data['email'] = strToLower($data['email']);
-                $data['password'] = $this->getHash($data['password']);
+                $data['password'] = $this->hashPassword($data['password']);
                 $data['last_used_passwords'] = [$data['password']];
                 $data['role_id'] = $roleId->_id;
                 if ($autoConfirm === 'true' || $autoConfirm === true) {
@@ -277,6 +277,12 @@ class User extends BaseMongo
         return !($length < $minLength || $length > $maxLength);
     }
 
+    /**
+     * Legacy hash used by records created before the bcrypt migration.
+     * Only called from the fallback branch of checkHash(). New passwords must
+     * be stored via hashPassword(); the fallback can be removed once every
+     * active account has re-authenticated and been transparently rehashed.
+     */
     public function getHash($password)
     {
         // NOTE: md5() is retained intentionally. Every existing user's stored
@@ -286,6 +292,32 @@ class User extends BaseMongo
         // tracked separately. DO NOT change this line without that plan.
         // phpcs:ignore
         return $this->encryptWithAES(md5($this->getSaltedString($password)));
+    }
+
+    public function hashPassword($password)
+    {
+        return password_hash($password, PASSWORD_BCRYPT);
+    }
+
+    public function needsRehash($storedHash)
+    {
+        if (!is_string($storedHash) || $storedHash === '') {
+            return false;
+        }
+        return password_needs_rehash($storedHash, PASSWORD_BCRYPT);
+    }
+
+    private function rehashStoredPassword($plaintext)
+    {
+        if (empty($this->_id)) {
+            return;
+        }
+        $newHash = $this->hashPassword($plaintext);
+        $this->getCollection()->updateOne(
+            ['_id' => $this->_id],
+            ['$set' => ['password' => $newHash]]
+        );
+        $this->password = $newHash;
     }
 
     public function getSaltedString($string)
@@ -430,14 +462,26 @@ class User extends BaseMongo
      */
     public function checkPassword($password, $dbPassword = false)
     {
-        if (!$dbPassword) {
-            return $this->checkHash($password, $this->password);
+        $checkingSelf = $dbPassword === false;
+        $stored = $checkingSelf ? $this->password : $dbPassword;
+
+        if (!$this->checkHash($password, $stored)) {
+            return false;
         }
-        return $this->checkHash($password, $dbPassword);
+
+        if ($checkingSelf && $this->needsRehash($stored)) {
+            $this->rehashStoredPassword($password);
+        }
+        return true;
     }
 
     /**
-     * compare the hash of provided passwords
+     * Verify a plaintext password against a stored hash.
+     *
+     * Tries the modern password_verify() path first. Falls back to the legacy
+     * MD5+AES scheme so accounts created before the bcrypt migration can still
+     * authenticate; callers that can persist should re-hash on a legacy match
+     * (see checkPassword()).
      *
      * @param string $password
      * @param string $dbPassword
@@ -445,7 +489,13 @@ class User extends BaseMongo
      */
     public function checkHash($password, $dbPassword)
     {
-        return $this->getHash($password) === $dbPassword;
+        if (!is_string($dbPassword) || $dbPassword === '') {
+            return false;
+        }
+        if (password_verify($password, $dbPassword)) {
+            return true;
+        }
+        return hash_equals($dbPassword, (string) $this->getHash($password));
     }
 
     /**
@@ -652,12 +702,11 @@ class User extends BaseMongo
             return $isValid;
         }
 
-        $password = $this->getHash($data['new_password']);
-
-        $alreadyUsed = $this->handleLastUsedPasswords($this->getHash($data['new_password']));
+        $alreadyUsed = $this->handleLastUsedPasswords($data['new_password']);
         if ($alreadyUsed) {
             return $alreadyUsed;
         }
+        $password = $this->hashPassword($data['new_password']);
         $user = $this->getCollection()->updateOne(
             ['_id' => $this->_id],
             [
@@ -677,22 +726,31 @@ class User extends BaseMongo
         return ['success' => false, 'message' => 'Password not updated'];
     }
 
-    public function handleLastUsedPasswords($currentPasswordHash, $lastUsedPasswordsData = [])
+    /**
+     * Reject passwords that match one of the user's last N stored hashes.
+     *
+     * Takes the new plaintext (not a hash) because bcrypt hashes are salted per
+     * call, so equality against a stored hash is meaningless — we must verify
+     * each stored entry with checkHash(), which also covers the legacy format.
+     */
+    public function handleLastUsedPasswords($plaintextPassword, $lastUsedPasswordsData = [])
     {
         $config = $this->di->getConfig();
         $lastUsedPasswordsCount = $config->path('user.last_used_passwords', 3);
 
         $lastUsedPasswords = $this->last_used_passwords ?? $lastUsedPasswordsData;
 
-        if (in_array($currentPasswordHash, $lastUsedPasswords)) {
-            return ['success' => false, 'message' => 'Password already used before'];
+        foreach ($lastUsedPasswords as $storedHash) {
+            if ($this->checkHash($plaintextPassword, $storedHash)) {
+                return ['success' => false, 'message' => 'Password already used before'];
+            }
         }
 
         if (count($lastUsedPasswords) >= $lastUsedPasswordsCount) {
             array_shift($lastUsedPasswords);
         }
 
-        $lastUsedPasswords[] = $currentPasswordHash;
+        $lastUsedPasswords[] = $this->hashPassword($plaintextPassword);
         $this->last_used_passwords = $lastUsedPasswords;
     }
 
@@ -1074,7 +1132,7 @@ class User extends BaseMongo
                         }
 
                         $alreadyUsed = $this->handleLastUsedPasswords(
-                            $this->getHash($data['new_password']),
+                            $data['new_password'],
                             (new static)::findFirst(
                                 [
                                     'email' => $decoded['data']['email']
@@ -1090,7 +1148,7 @@ class User extends BaseMongo
                                 ['email' => $decoded['data']['email']],
                                 [
                                     '$set' => [
-                                        'password' => $this->getHash($data['new_password']),
+                                        'password' => $this->hashPassword($data['new_password']),
                                         'last_used_passwords' => $this->last_used_passwords,
                                     ]
                                 ]
@@ -1299,14 +1357,12 @@ class User extends BaseMongo
                 return ['success' => false, 'message' => 'Confirm password not matched with new password!'];
             }
 
-            $password = $this->getHash($data['new_password']);
-            $data['password'] = $password;
-            unset($data['new_password'], $data['confirm_password']);
-
-            $alreadyUsed = $this->handleLastUsedPasswords($this->getHash($data['password']));
+            $alreadyUsed = $this->handleLastUsedPasswords($data['new_password']);
             if ($alreadyUsed) {
                 return $alreadyUsed;
             }
+            $data['password'] = $this->hashPassword($data['new_password']);
+            unset($data['new_password'], $data['confirm_password']);
             $set['last_used_passwords'] = $this->last_used_passwords;
         }
         if (isset($data['email'])) {
