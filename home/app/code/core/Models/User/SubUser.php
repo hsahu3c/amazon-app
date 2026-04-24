@@ -22,6 +22,16 @@ class SubUser extends \App\Core\Models\BaseMongo
         $this->setConnectionService($this->getMultipleDbManager()->getDefaultDb());
     }
 
+    /**
+     * Generate a non-reversible cache key for the given value.
+     * Uses SHA-256 because MD5 is flagged as insecure by static analysis,
+     * even when (as here) the hash is only a cache-key generator.
+     */
+    private function cacheKey($value)
+    {
+        return hash('sha256', (string)$value);
+    }
+
     public function init()
     {
         $mongo = $this->di->getObjectManager()->create('\App\Core\Models\BaseMongo');
@@ -301,15 +311,15 @@ class SubUser extends \App\Core\Models\BaseMongo
                 if ($user->checkHash($data['password'], $subUser['password'])) {
                     // remove all old attempt's data
                     $this->di->getCache()->deleteMultiple([
-                        md5($subUser->username . "_sub") . "_temp_block_count",
-                        md5($subUser->username . "_sub") . "_lastlogin",
-                        md5($subUser->username . "_sub") . "",
-                        md5($subUser->email . "_sub") . "_temp_block_count",
-                        md5($subUser->email . "_sub") . "_lastlogin",
-                        md5($subUser->email . "_sub") . "",
-                        md5($clientIp . "_sub") . "_temp_block_count",
-                        md5($clientIp . "_sub") . "_lastlogin",
-                        md5($clientIp . "_sub") . ""
+                        $this->cacheKey($subUser->username . "_sub") . "_temp_block_count",
+                        $this->cacheKey($subUser->username . "_sub") . "_lastlogin",
+                        $this->cacheKey($subUser->username . "_sub") . "",
+                        $this->cacheKey($subUser->email . "_sub") . "_temp_block_count",
+                        $this->cacheKey($subUser->email . "_sub") . "_lastlogin",
+                        $this->cacheKey($subUser->email . "_sub") . "",
+                        $this->cacheKey($clientIp . "_sub") . "_temp_block_count",
+                        $this->cacheKey($clientIp . "_sub") . "_lastlogin",
+                        $this->cacheKey($clientIp . "_sub") . ""
                     ], "requests");
                     return [
                         'success' => true,
