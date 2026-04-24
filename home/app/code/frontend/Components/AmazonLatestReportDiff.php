@@ -94,7 +94,7 @@ try {
     echo "\nComparison complete! All unique objects saved to: " . $output_file_path . "\n";
 
 } catch (Exception $e) {
-    echo "Error: " . $e->getMessage() . "\n";
+    // echo "Error: " . $e->getMessage() . "\n";
     exit(1); // Exit with an error code
 }
 

@@ -198,7 +198,7 @@ class CsvHelper extends \App\Core\Components\Base
             return $s3->doesObjectExist($bucketName, $key);
         } catch (AwsException $e) {
             // Handle the exception
-            echo $e->getMessage() . "\n";
+            // echo $e->getMessage() . "\n";
             return false;
         }
     }

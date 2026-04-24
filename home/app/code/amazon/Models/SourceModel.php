@@ -2487,10 +2487,10 @@ class SourceModel extends BaseSourceModel
             $spreadsheet = IOFactory::load($filePath);
             $sheet = $spreadsheet->getActiveSheet();
         } catch (AwsException $e) {
-            echo "AWS error: " . $e->getMessage();
+            // echo "AWS error: " . $e->getMessage();
             die;
         } catch (Exception $e) {
-            echo "General error: " . $e->getMessage();
+            // echo "General error: " . $e->getMessage();
             die;
         }
         $updateRefine = [];
@@ -2564,9 +2564,9 @@ class SourceModel extends BaseSourceModel
             $this->di->getLog()->logContent('queue data ' . $sqs_data['user_id'] . ':  ' . json_encode($handlerData), 'info', $logFile);
             $this->di->getMessageManager()->pushMessage($handlerData);
         } catch (Exception $e) {
-            echo $e->getMessage();
+            // echo $e->getMessage();
         } catch (AwsException $e) {
-            echo "AWS error: " . $e->getMessage();
+            // echo "AWS error: " . $e->getMessage();
         }
     }
     // Helper Functions

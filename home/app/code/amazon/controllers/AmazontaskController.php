@@ -43,7 +43,7 @@ class AmazontaskController extends \App\Core\Controllers\BaseController
             print_r($response);
             die();
         } catch (\Exception $e) {
-            die($e->getMessage());
+            // die($e->getMessage());
         }
     }
 
@@ -69,7 +69,7 @@ class AmazontaskController extends \App\Core\Controllers\BaseController
                 ->shipOrders($amazonOrderId);
             die();
         } catch (\Exception $e) {
-            die($e->getMessage());
+            // die($e->getMessage());
         }
         $feedContent = [
             415222310620 => [
