@@ -1166,7 +1166,7 @@ class Order implements OrderInterface
                     mkdir($dirname, 0777, true);
                 }
 
-                file_put_contents($filePath, file_get_contents($customizedURL));
+                file_put_contents($filePath, file_get_contents(realpath($customizedURL)));
             }
 
             if (file_exists($filePath)) {
@@ -1185,7 +1185,7 @@ class Order implements OrderInterface
                     );
 
                     if (file_exists($customizationFilePath)) {
-                        $customizationJson = file_get_contents($customizationFilePath);
+                        $customizationJson = file_get_contents(realpath($customizationFilePath));
 
                         if ($customizationJson) {
                             $customizationData = json_decode($customizationJson, true);
