@@ -16,6 +16,18 @@ class Setup extends Base
     {
         $this->output = new ConsoleOutput();
     }
+
+    /**
+     * Generate a non-reversible signature for a given value.
+     * Uses SHA-256 because MD5 is flagged as insecure by static analysis.
+     * Note: the ACL setup hash is stored on disk in var/setup.hash, so
+     * on first deploy after this change the stored hash won't match and
+     * the setup routine will re-run once per environment.
+     */
+    private function signature($value)
+    {
+        return hash('sha256', (string)$value);
+    }
     /**
      * Perform the upgrade
      *
@@ -199,7 +211,7 @@ class Setup extends Base
             ->getConnection()
             ->acl_resource;
         // calculating the hash
-        $hash = md5((string) $db->count());
+        $hash = $this->signature((string) $db->count());
         $finalResources = [];
         $resourcesToBeDeleted = [];
         $resourcesToBeInserted = [];
@@ -238,7 +250,7 @@ class Setup extends Base
                     $className = strtolower(str_replace('-Controller', '', $className));
                     foreach ($methods as $method) {
                         if (strpos($method, 'Action') !== false) {
-                            $hash .= md5($module['name'] . '_' . $className . '_' . $method);
+                            $hash .= $this->signature($module['name'] . '_' . $className . '_' . $method);
                             $method = str_replace('Action', '', $method);
                             $resources = $module['name'] . '_' . $className . '_' . $method;
                             $finalResources[$module['name'] . '_' . $className . '_' . $method] = 1;
@@ -273,7 +285,7 @@ class Setup extends Base
         if (
             is_file(BP . "/var/setup.hash") &&
             file_get_contents(BP . "/var/setup.hash") ===
-            md5($hash)
+            $this->signature($hash)
         ) {
             return true;
         }
@@ -289,7 +301,7 @@ class Setup extends Base
         if ($resourcesToBeInserted) $db->insertMany($resourcesToBeInserted);
         if ($deleted) $db->deleteMany(['$or' => $deleted]);
         // set calculated hash
-        file_put_contents(BP . "/var/setup.hash", md5($hash));
+        file_put_contents(BP . "/var/setup.hash", $this->signature($hash));
     }
     /**
      * Build Acl from database

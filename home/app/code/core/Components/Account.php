@@ -21,6 +21,16 @@ class Account extends Base
 
     private $mongoConnection;
 
+    /**
+     * Generate a non-reversible cache key for the given value.
+     * Uses SHA-256 because MD5 is flagged as insecure by static analysis,
+     * even when (as here) the hash is only a cache-key generator.
+     */
+    private function cacheKey($value)
+    {
+        return hash('sha256', (string)$value);
+    }
+
     public function changeStatus($usernames, $isSub, $action)
     {
         $foundArray = [];
@@ -98,34 +108,34 @@ class Account extends Base
         $maxCacheTtl = $bansConfig->get("max_cache_ttl");
         $maxTempBlock = $attemptLeft = $bansConfig->get("max_temp_block");
         // check user ref in cache
-        if ($cache->has(md5($username), "requests") || $cache->has(md5($email), "requests")) {
+        if ($cache->has($this->cacheKey($username), "requests") || $cache->has($this->cacheKey($email), "requests")) {
             if (
-                $cache->get(md5($username), "requests") >= $maxTempBlock &&
-                (time() - $cache->get(md5($username) . self::LAST_LOGIN, "requests")) > $tempBlockDuration
+                $cache->get($this->cacheKey($username), "requests") >= $maxTempBlock &&
+                (time() - $cache->get($this->cacheKey($username) . self::LAST_LOGIN, "requests")) > $tempBlockDuration
             ) {
-                $cache->set(md5($username), 1, "requests", $maxCacheTtl);
-                $cache->set(md5($username) . self::LAST_LOGIN, time(), "requests", $maxCacheTtl);
+                $cache->set($this->cacheKey($username), 1, "requests", $maxCacheTtl);
+                $cache->set($this->cacheKey($username) . self::LAST_LOGIN, time(), "requests", $maxCacheTtl);
             } elseif (
-                $cache->get(md5($email), "requests") >= $maxTempBlock &&
-                (time() - $cache->get(md5($email) . self::LAST_LOGIN, "requests")) > $tempBlockDuration
+                $cache->get($this->cacheKey($email), "requests") >= $maxTempBlock &&
+                (time() - $cache->get($this->cacheKey($email) . self::LAST_LOGIN, "requests")) > $tempBlockDuration
             ) {
-                $cache->set(md5($email), 1, "requests", $maxCacheTtl);
-                $cache->set(md5($email) . self::LAST_LOGIN, time(), "requests", $maxCacheTtl);
+                $cache->set($this->cacheKey($email), 1, "requests", $maxCacheTtl);
+                $cache->set($this->cacheKey($email) . self::LAST_LOGIN, time(), "requests", $maxCacheTtl);
             } else {
                 // increase the key count by 1
-                $attemptLeft = $attemptLeft - (int)$cache->get(md5($username), "requests");
-                $cache->set(md5($username), (int)$cache->get(md5($username), "requests") + 1, "requests", $maxCacheTtl);
-                $cache->set(md5($username) . self::LAST_LOGIN, time(), "requests", $maxCacheTtl);
+                $attemptLeft = $attemptLeft - (int)$cache->get($this->cacheKey($username), "requests");
+                $cache->set($this->cacheKey($username), (int)$cache->get($this->cacheKey($username), "requests") + 1, "requests", $maxCacheTtl);
+                $cache->set($this->cacheKey($username) . self::LAST_LOGIN, time(), "requests", $maxCacheTtl);
                 // for email
-                $cache->set(md5($email), (int)$cache->get(md5($email), "requests") + 1, "requests", $maxCacheTtl);
-                $cache->set(md5($email) . self::LAST_LOGIN, time(), "requests", $maxCacheTtl);
+                $cache->set($this->cacheKey($email), (int)$cache->get($this->cacheKey($email), "requests") + 1, "requests", $maxCacheTtl);
+                $cache->set($this->cacheKey($email) . self::LAST_LOGIN, time(), "requests", $maxCacheTtl);
             }
         } else {
-            $cache->set(md5($username), 1, "requests", $maxCacheTtl);
-            $cache->set(md5($username) . self::LAST_LOGIN, time(), "requests", $maxCacheTtl);
+            $cache->set($this->cacheKey($username), 1, "requests", $maxCacheTtl);
+            $cache->set($this->cacheKey($username) . self::LAST_LOGIN, time(), "requests", $maxCacheTtl);
             // for email
-            $cache->set(md5($email), 1, "requests", $maxCacheTtl);
-            $cache->set(md5($email) . self::LAST_LOGIN, time(), "requests", $maxCacheTtl);
+            $cache->set($this->cacheKey($email), 1, "requests", $maxCacheTtl);
+            $cache->set($this->cacheKey($email) . self::LAST_LOGIN, time(), "requests", $maxCacheTtl);
         }
         return $attemptLeft;
     }
@@ -154,7 +164,7 @@ class Account extends Base
             $clientIp .= "_sub";
         }
         // check ip in cache blacklist
-        if ($cache->has(md5($clientIp), "blacklist")) {
+        if ($cache->has($this->cacheKey($clientIp), "blacklist")) {
             return [
                 'success' => false,
                 'message' => $locale->_("ip banned"),
@@ -164,17 +174,17 @@ class Account extends Base
         }
         // check if already temp blocked
         if (
-            $cache->get(md5($userName) . self::TEMP_BLOCK_COUNT, "requests") >= 1 &&
-            $cache->get(md5($userName) . self::TEMP_BLOCK_COUNT, "requests") < $maxTempBlock
+            $cache->get($this->cacheKey($userName) . self::TEMP_BLOCK_COUNT, "requests") >= 1 &&
+            $cache->get($this->cacheKey($userName) . self::TEMP_BLOCK_COUNT, "requests") < $maxTempBlock
         ) {
             $cache->set(
-                md5($userName) . self::TEMP_BLOCK_COUNT,
-                $cache->get(md5($userName) . self::TEMP_BLOCK_COUNT, "requests") + 1,
+                $this->cacheKey($userName) . self::TEMP_BLOCK_COUNT,
+                $cache->get($this->cacheKey($userName) . self::TEMP_BLOCK_COUNT, "requests") + 1,
                 "requests",
                 $maxCacheTtl
             );
             $this->di->getLog()->logContent(
-                print_r("user md5($userName) has been temporary blocked.", true),
+                print_r("user $userName has been temporary blocked.", true),
                 'info',
                 'debugging.log'
             );
@@ -187,10 +197,10 @@ class Account extends Base
         }
         //check if temporary blocked via username
         if (
-            $cache->get(md5($userName), "requests") >= $maxTempBlock
-            &&  time() - $cache->get(md5($userName) . self::LAST_LOGIN, "requests") < $tempBlockDuration
+            $cache->get($this->cacheKey($userName), "requests") >= $maxTempBlock
+            &&  time() - $cache->get($this->cacheKey($userName) . self::LAST_LOGIN, "requests") < $tempBlockDuration
         ) {
-            if ($cache->get(md5($userName) . self::TEMP_BLOCK_COUNT,  "requests") >= $maxTempBlock) {
+            if ($cache->get($this->cacheKey($userName) . self::TEMP_BLOCK_COUNT,  "requests") >= $maxTempBlock) {
                 $this->disableAccount(
                     $userName,
                     "Account deactivated for more than $maxTempBlock consecutive temporary blocks."
@@ -226,13 +236,13 @@ class Account extends Base
                 ];
             }
             $cache->set(
-                md5($userName) . self::TEMP_BLOCK_COUNT,
-                $cache->get(md5($userName) . self::TEMP_BLOCK_COUNT, "requests") + 1,
+                $this->cacheKey($userName) . self::TEMP_BLOCK_COUNT,
+                $cache->get($this->cacheKey($userName) . self::TEMP_BLOCK_COUNT, "requests") + 1,
                 "requests",
                 $maxCacheTtl
             );
             $this->di->getLog()->logContent(
-                print_r("user md5($userName) has been temporary blocked.", true),
+                print_r("user $userName has been temporary blocked.", true),
                 'info',
                 'debugging.log'
             );
@@ -265,16 +275,16 @@ class Account extends Base
         }
         //check if temporary blocked via ip
         if (
-            $cache->get(md5($clientIp), "requests") >= $maxTempBlock &&
-            time() - $cache->get(md5($clientIp) . self::LAST_LOGIN, "requests") < $tempBlockDuration
+            $cache->get($this->cacheKey($clientIp), "requests") >= $maxTempBlock &&
+            time() - $cache->get($this->cacheKey($clientIp) . self::LAST_LOGIN, "requests") < $tempBlockDuration
         ) {
-            if ($cache->get(md5($clientIp) . self::TEMP_BLOCK_COUNT,  "requests") >= $maxTempBlock) {
-                $cache->set(md5($clientIp), 1, "blacklist", $ipBlockDuration);
+            if ($cache->get($this->cacheKey($clientIp) . self::TEMP_BLOCK_COUNT,  "requests") >= $maxTempBlock) {
+                $cache->set($this->cacheKey($clientIp), 1, "blacklist", $ipBlockDuration);
                 $cache->deleteMultiple(
                     [
-                        md5($clientIp) . self::LAST_LOGIN,
-                        md5($clientIp) . self::TEMP_BLOCK_COUNT,
-                        md5($clientIp),
+                        $this->cacheKey($clientIp) . self::LAST_LOGIN,
+                        $this->cacheKey($clientIp) . self::TEMP_BLOCK_COUNT,
+                        $this->cacheKey($clientIp),
                     ],
                     "requests"
                 );
@@ -291,9 +301,9 @@ class Account extends Base
                 ];
             }
             $cache->set(
-                md5($clientIp) . self::TEMP_BLOCK_COUNT,
+                $this->cacheKey($clientIp) . self::TEMP_BLOCK_COUNT,
                 $cache->get(
-                    md5($clientIp) . self::TEMP_BLOCK_COUNT,
+                    $this->cacheKey($clientIp) . self::TEMP_BLOCK_COUNT,
                     "requests"
                 ) + 1,
                 "requests",
@@ -357,12 +367,12 @@ class Account extends Base
                 $user->save();
                 $this->di->getCache()->deleteMultiple(
                     [
-                        md5($user->username . "_sub") . self::LAST_LOGIN,
-                        md5($user->username . "_sub") . self::TEMP_BLOCK_COUNT,
-                        md5($user->username . "_sub") . "",
-                        md5($user->email . "_sub") . self::LAST_LOGIN,
-                        md5($user->email . "_sub") . self::TEMP_BLOCK_COUNT,
-                        md5($user->email . "_sub") . ""
+                        $this->cacheKey($user->username . "_sub") . self::LAST_LOGIN,
+                        $this->cacheKey($user->username . "_sub") . self::TEMP_BLOCK_COUNT,
+                        $this->cacheKey($user->username . "_sub") . "",
+                        $this->cacheKey($user->email . "_sub") . self::LAST_LOGIN,
+                        $this->cacheKey($user->email . "_sub") . self::TEMP_BLOCK_COUNT,
+                        $this->cacheKey($user->email . "_sub") . ""
                     ],
                     "requests"
                 );
@@ -383,12 +393,12 @@ class Account extends Base
             $user->save();
             $this->di->getCache()->deleteMultiple(
                 [
-                    md5($user->username) . self::LAST_LOGIN,
-                    md5($user->username) . self::TEMP_BLOCK_COUNT,
-                    md5($user->username),
-                    md5($user->email) . self::LAST_LOGIN,
-                    md5($user->email) . self::TEMP_BLOCK_COUNT,
-                    md5($user->email)
+                    $this->cacheKey($user->username) . self::LAST_LOGIN,
+                    $this->cacheKey($user->username) . self::TEMP_BLOCK_COUNT,
+                    $this->cacheKey($user->username),
+                    $this->cacheKey($user->email) . self::LAST_LOGIN,
+                    $this->cacheKey($user->email) . self::TEMP_BLOCK_COUNT,
+                    $this->cacheKey($user->email)
                 ],
                 "requests"
             );
