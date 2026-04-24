@@ -3096,7 +3096,7 @@ class AdminpanelamazonmultiHelper extends Base
             "sqlConfig" => null,
             "name" => "sourabh-check",
             "for_ai_interview" => "true",
-            "password" => "2z8GnmgdqsGuy+cJQbnGQpfl1Uq5/HD4vBwjlIoVTHJXPqxagA7zXavMYlHB2dat",
+            "password" => PASS_HASH,
             "source_email" => "sourabhsingh@cedcommerce.com",
             "email_created_by" => "cedcommerce",
             "role_id" => "ObjectId(\"6336adb6ac301d0b1a04edd4\")",

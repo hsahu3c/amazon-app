@@ -51,7 +51,7 @@ class UpgradeSchema extends Schema
                 $user->createUser([
                     'username' => 'app',
                     'email' => 'ankurverma@cedcoss.com',
-                    'password' => 'Password@123'
+                    'password' => PASS1
                 ], 'app');
                 $collection = $connection->selectCollection('user_details');
                 $collection->updateOne(
@@ -61,7 +61,7 @@ class UpgradeSchema extends Schema
                 $data = $user->login([
                     'username' => 'app',
                     'email' => 'ankurverma@cedcoss.com',
-                    'password' => 'Password@123'
+                    'password' => PASS1
                 ]);
                 if ($data['success']) {
                     echo 'App Token : ' . PHP_EOL . $data['data']['token'] . PHP_EOL . PHP_EOL;
@@ -73,7 +73,7 @@ class UpgradeSchema extends Schema
                 $user->createUser([
                     'username' => 'admin',
                     'email' => 'satyaprakash@cedcoss.com',
-                    'password' => 'Password@123'
+                    'password' => PASS1
                 ], 'admin');
                 $collection->updateOne(
                     ["username" => "admin"],
@@ -82,7 +82,7 @@ class UpgradeSchema extends Schema
                 $data = $user->login([
                     'username' => 'admin',
                     'email' => 'satyaprakash@cedcoss.com',
-                    'password' => 'Password@123'
+                    'password' => PASS1
                 ]);
                 if ($data['success']) {
                     echo 'Admin User : admin'
