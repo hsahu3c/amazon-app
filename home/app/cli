@@ -1,0 +1,155 @@
+<?php
+
+use Phalcon\Autoload\Loader;
+use Phalcon\Di\FactoryDefault\Cli as CliDI;
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+/*if (PHP_SAPI !== 'cli') {
+    echo 'It must be run as a CLI application';
+    exit(1);
+}*/
+//UMASK
+umask(0002);
+define('BP', dirname(__DIR__));
+define('DS', '/');
+define('CODE', BP . DS . 'app' . DS . 'code');
+define('HOST', 'https://apps.cedcommerce.com');
+define('SIG_DIR', BP . DS . "var" . DS . "workers"); // Directory for pid files for worker instances
+require BP . DS . 'vendor' . DS . 'autoload.php';
+
+function deprecationErrorHandler($errno, $errStr, $file, $line)
+{
+    $devEnvPath = BP . DS . 'var' . DS . 'is-dev.flag';
+    $isDev = is_file($devEnvPath) && file_get_contents($devEnvPath);
+    if ($isDev) {
+        return;
+    }
+
+    if ($errno === E_DEPRECATED || $errno === E_USER_DEPRECATED) {
+        $errorMessage = "Deprecation Notice: $errStr - $file:$line";
+
+        $fileHash = md5("$file:$line");
+        $path = 'deprecations' . DS . $fileHash . ".hash";
+        if (is_file(BP . DS . 'var' . DS . 'log' . DS . $path)) {
+            return;
+        }
+
+        $log = new \App\Core\Components\Log;
+        $log->setDi(\Phalcon\Di\FactoryDefault::getDefault());
+        $log->getDi()->set(name: 'config', definition: new \Phalcon\Config\Config(data: ['log_level' => 0]));
+        // write hash
+        $log->logContent('', \Phalcon\Logger\Logger::WARNING, $path, true);
+
+        $log->logContent($errorMessage, \Phalcon\Logger\Logger::WARNING, 'deprecations/deprecations.log', true);
+    }
+}
+set_error_handler("deprecationErrorHandler");
+
+/**
+ * Registering system signal handler to process SIGTERM (soft-kill)
+ */
+
+//Handler function for kill signals
+function handler($sigNo)
+{
+    if ($sigNo == SIGTERM) {
+        if (file_exists(SIG_DIR . DS . getmypid())) {
+            unlink(SIG_DIR . DS . getmypid());
+        }
+    }
+    return true;
+}
+
+// Create signal dir if it does not exist
+if (!is_dir(SIG_DIR)) {
+    mkdir(SIG_DIR);
+}
+pcntl_signal(SIGTERM, 'handler'); // Register kill handler for SIGTERM - soft kill
+
+if (isset($argv[4]) && $argv[4] == 'revive') {
+    $revive = true;
+} else {
+    $revive = false;
+}
+$h = fopen(BP . DS . 'var' . DS . 'log' . DS . 'cli.log', "a");
+do {
+    $result = function (&$revive) use ($argv, $h) {
+        $di = new CliDI();
+        $di->set(
+            'loader',
+            function () {
+                $loader = new Loader();
+                return $loader;
+            }
+        );
+        $di->set('isDev', function () {
+            return isset($_SERVER['CED_IS_DEV']) ?
+                (int)$_SERVER['CED_IS_DEV'] : (file_exists(BP . '/var/is-dev.flag') ?
+                    trim(file_get_contents(BP . '/var/is-dev.flag')) :
+                    0
+                );
+        });
+        /** @var Loader */
+        $loader = $di['loader'];
+        $loader->setDirectories([__DIR__ . '/console',  CODE . '/core/console']);
+        $loader->setNamespaces(['App\Core' => CODE . '/core/',]);
+        $loader->register();
+        $di->set('registry', new \App\Core\Components\Registry);
+        $console = new App\Core\ConsoleApplication($di);
+
+        $arguments = [];
+
+        foreach ($argv as $k => $arg) {
+            if ($k === 1) {
+                $arguments['task'] = $arg;
+            } elseif ($k === 2) {
+                $arguments['action'] = $arg;
+            } elseif ($k >= 3) {
+                $arguments['params'][] = $arg;
+            }
+        }
+
+        try {
+            $console->handle($arguments);
+        } catch (\Phalcon\Cli\Router\Exception $e) {
+            fwrite($h, date('d-m-y h:i:s') . ': ' . $e->getMessage() . PHP_EOL . $e->getTraceAsString() . PHP_EOL);
+            fclose($h);
+            exit(1);
+        } catch (\Phalcon\Cli\Dispatcher\Exception $e) {
+            fwrite($h, date('d-m-y h:i:s') . ': ' . $e->getMessage() . PHP_EOL . $e->getTraceAsString() . PHP_EOL);
+            fclose($h);
+            exit(1);
+        } catch (\Phalcon\Cli\Console\Exception $e) {
+            fwrite($h, date('d-m-y h:i:s') . ': ' . $e->getMessage() . PHP_EOL . $e->getTraceAsString() . PHP_EOL);
+            fclose($h);
+            exit(1);
+        } catch (\Phalcon\Exception $e) {
+            fwrite($h, date('d-m-y h:i:s') . ': ' . $e->getMessage() . PHP_EOL . $e->getTraceAsString() . PHP_EOL);
+            fclose($h);
+            exit(1);
+        } catch (\Throwable $throwable) {
+            fwrite($h, date('d-m-y h:i:s') . ': ' . $throwable->getMessage() . PHP_EOL . $throwable->getTraceAsString() . PHP_EOL);
+            if ($throwable->getMessage() == 'revive') {
+
+                $revive = true;
+            } else {
+                fclose($h);
+                exit(1);
+            }
+        } catch (\Exception $exception) {
+            fwrite($h, date('d-m-y h:i:s') . ' revive' . $exception->getMessage() . PHP_EOL . $exception->getTraceAsString() . PHP_EOL);
+            if ($exception->getMessage() == 'revive') {
+                $revive = true;
+            } else {
+                fclose($h);
+                exit(1);
+            }
+        }
+    };
+    $result($revive);
+} while ($revive);
+
+fwrite($h, date('d-m-y h:i:s') . ': cli ended ' . json_encode($argv) . PHP_EOL);
+fclose($h);

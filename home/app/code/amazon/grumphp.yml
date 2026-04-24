@@ -1,0 +1,35 @@
+parameters:
+  git_dir: .
+  root_dir: ../../..
+  bin_dir: '%root_dir%/vendor/bin'
+  hide_circumvention_tip: true
+  process_timeout: 120
+  tasks:
+    composer:
+      file: ./composer.json
+      no_check_all: true
+      no_check_lock: false
+      no_check_publish: false
+      with_dependencies: false
+      strict: false
+    git_blacklist:
+      keywords:
+        - "die("
+        - "var_dump("
+        - "print_r("
+        - "exit;"
+        - "console.log("
+    phpcs:
+      standard: PSR2
+      tab_width: 4
+      exclude: [PSR2.Methods.MethodDeclaration, Generic.Files.LineLength, PSR1.Files.SideEffects]
+      report: full
+      triggered_by: [phtml, xml, css, js, php]
+    phpcsfixer2:
+      allow_risky: ~
+      cache_file: ~
+      config: '../../../.php_cs.dist'
+      using_cache: ~
+      verbose: true
+      config_contains_finder: false
+      triggered_by: ['php', 'phtml']

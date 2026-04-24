@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phpunit bootstrap="/var/www/html/phalcon/importer/app/phpunit.php" backupGlobals="false" backupStaticAttributes="false" verbose="true" colors="true" convertErrorsToExceptions="true" convertNoticesToExceptions="true" convertWarningsToExceptions="true" processIsolation="false" stopOnFailure="false" syntaxCheck="true">
+  <testsuite name="Phalcon - Testsuite">
+    <directory>/var/www/html/phalcon/importer/app/code/core</directory>
+    <directory>/var/www/html/phalcon/importer/app/code/rmq</directory>
+    <directory>/var/www/html/phalcon/importer/app/code/bing</directory>
+    <directory>/var/www/html/phalcon/importer/app/code/bigcommerce</directory>
+    <directory>/var/www/html/phalcon/importer/app/code/angular</directory>
+    <directory>/var/www/html/phalcon/importer/app/code/shopifygql</directory>
+    <directory>/var/www/html/phalcon/importer/app/code/amazonimporter</directory>
+    <directory>/var/www/html/phalcon/importer/app/code/connector</directory>
+    <directory>/var/www/html/phalcon/importer/app/code/frontend</directory>
+    <directory>/var/www/html/phalcon/importer/app/code/google</directory>
+    <directory>/var/www/html/phalcon/importer/app/code/plan</directory>
+    <directory>/var/www/html/phalcon/importer/app/code/shopify</directory>
+    <directory>/var/www/html/phalcon/importer/app/code/ebay</directory>
+    <directory>/var/www/html/phalcon/importer/app/code/payment</directory>
+  </testsuite>
+  <filter>
+    <whitelist>
+      <directory>/var/www/html/phalcon/importer/app/code/core/Test</directory>
+      <directory>/var/www/html/phalcon/importer/app/code/rmq/Test</directory>
+      <directory>/var/www/html/phalcon/importer/app/code/bing/Test</directory>
+      <directory>/var/www/html/phalcon/importer/app/code/bigcommerce/Test</directory>
+      <directory>/var/www/html/phalcon/importer/app/code/angular/Test</directory>
+      <directory>/var/www/html/phalcon/importer/app/code/shopifygql/Test</directory>
+      <directory>/var/www/html/phalcon/importer/app/code/amazonimporter/Test</directory>
+      <directory>/var/www/html/phalcon/importer/app/code/connector/Test</directory>
+      <directory>/var/www/html/phalcon/importer/app/code/frontend/Test</directory>
+      <directory>/var/www/html/phalcon/importer/app/code/google/Test</directory>
+      <directory>/var/www/html/phalcon/importer/app/code/plan/Test</directory>
+      <directory>/var/www/html/phalcon/importer/app/code/shopify/Test</directory>
+      <directory>/var/www/html/phalcon/importer/app/code/ebay/Test</directory>
+      <directory>/var/www/html/phalcon/importer/app/code/payment/Test</directory>
+    </whitelist>
+  </filter>
+</phpunit>

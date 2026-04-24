@@ -1,0 +1,267 @@
+[
+    {
+        "title": "Beginner",
+        "description": "Up to 100 Orders",
+        "validity": "onetime",
+        "custom_price": 5,
+        "scope": "global",
+        "sort_order": 1,
+        "marketplace": "amazon",
+        "source_marketplace":"shopify",
+        "target_marketplace":"amazon",
+        "discounts": [],
+        "badge": "",
+        "trial_days_limit":"",
+        "trial_credit_limit":"",
+        "services_groups": [
+            {
+                "title": "Order Management",
+                "description": "Order Management",
+                "services": [
+                    {
+                        "title": "Order Sync",
+                        "code": "upto_100_orders",
+                        "type": "order_sync",
+                        "required": 1,
+                        "service_charge": "0",
+                        "expiring_at": "",
+                        "discounts": [],
+                        "sort_order": 1,
+                        "trial_days_limit":"",
+                        "trial_credit_limit":"",
+                        "prepaid": {
+                            "service_credits": "100",
+                            "validity_changes": "Replace",
+                            "fixed_price": 0,
+                            "reset_credit_after": 0,
+                            "expiring_at": "0"
+                        }
+                    }
+                ]
+            }
+        ],
+        "type" : "add_on",
+        "add_on_id": "1"
+    },
+    {
+        "title": "Basic",
+        "description": "Up to 200 Orders",
+        "validity": "onetime",
+        "custom_price": 9,
+        "scope": "global",
+        "sort_order": 2,
+        "marketplace": "amazon",
+        "source_marketplace":"shopify",
+        "target_marketplace":"amazon",
+        "discounts": [],
+        "badge": "",
+        "trial_days_limit":"",
+        "trial_credit_limit":"",
+        "services_groups": [
+            {
+                "title": "Order Management",
+                "description": "Order Management",
+                "services": [
+                    {
+                        "title": "Order Sync",
+                        "code": "upto_200_orders",
+                        "type": "order_sync",
+                        "required": 1,
+                        "service_charge": "0",
+                        "expiring_at": "",
+                        "discounts": [],
+                        "sort_order": 1,
+                        "trial_days_limit":"",
+                        "trial_credit_limit":"",
+                        "prepaid": {
+                            "service_credits": "200",
+                            "validity_changes": "Replace",
+                            "fixed_price": 0,
+                            "reset_credit_after": 0,
+                            "expiring_at": "0"
+                        }
+                    }
+                ]
+            }
+        ],
+        "type" : "add_on",
+        "add_on_id": "2"
+    },
+    {
+        "title": "Standard",
+        "description": "Up to 500 Orders",
+        "validity": "onetime",
+        "custom_price": 19,
+        "scope": "global",
+        "sort_order": 3,
+        "marketplace": "amazon",
+        "source_marketplace":"shopify",
+        "target_marketplace":"amazon",
+        "discounts": [],
+        "badge": "",
+        "trial_days_limit":"",
+        "trial_credit_limit":"",
+        "services_groups": [
+            {
+                "title": "Order Management",
+                "description": "Order Management",
+                "services": [
+                    {
+                        "title": "Order Sync",
+                        "code": "upto_500_orders",
+                        "type": "order_sync",
+                        "required": 1,
+                        "service_charge": "0",
+                        "expiring_at": "",
+                        "discounts": [],
+                        "sort_order": 1,
+                        "trial_days_limit":"",
+                        "trial_credit_limit":"",
+                        "prepaid": {
+                            "service_credits": "500",
+                            "validity_changes": "Replace",
+                            "fixed_price": 0,
+                            "reset_credit_after": 0,
+                            "expiring_at": "0"
+                        }
+                    }
+                ]
+            }
+        ],
+        "type" : "add_on",
+        "add_on_id": "3"
+    },
+    {
+        "title": "Premium",
+        "description": "Up to 1000 Orders",
+        "validity": "onetime",
+        "custom_price": 29,
+        "scope": "global",
+        "sort_order": 4,
+        "marketplace": "amazon",
+        "source_marketplace":"shopify",
+        "target_marketplace":"amazon",
+        "discounts": [],
+        "badge": "",
+        "trial_days_limit":"",
+        "trial_credit_limit":"",
+        "services_groups": [
+            {
+                "title": "Order Management",
+                "description": "Order Management",
+                "services": [
+                    {
+                        "title": "Order Sync",
+                        "code": "upto_1000_orders",
+                        "type": "order_sync",
+                        "required": 1,
+                        "service_charge": "0",
+                        "expiring_at": "",
+                        "discounts": [],
+                        "sort_order": 1,
+                        "trial_days_limit":"",
+                        "trial_credit_limit":"",
+                        "prepaid": {
+                            "service_credits": "1000",
+                            "validity_changes": "Replace",
+                            "fixed_price": 0,
+                            "reset_credit_after": 0,
+                            "expiring_at": "0"
+                        }
+                    }
+                ]
+            }
+        ],
+        "type" : "add_on",
+        "add_on_id": "4"
+    },
+    {
+        "title": "Ultimate",
+        "description": "Up to 1500 Orders",
+        "validity": "onetime",
+        "custom_price": 39,
+        "scope": "global",
+        "sort_order": 5,
+        "marketplace": "amazon",
+        "source_marketplace":"shopify",
+        "target_marketplace":"amazon",
+        "discounts": [],
+        "badge": "",
+        "trial_days_limit":"",
+        "trial_credit_limit":"",
+        "services_groups": [
+            {
+                "title": "Order Management",
+                "description": "Order Management",
+                "services": [
+                    {
+                        "title": "Order Sync",
+                        "code": "upto_1500_orders",
+                        "type": "order_sync",
+                        "required": 1,
+                        "service_charge": "0",
+                        "expiring_at": "",
+                        "discounts": [],
+                        "sort_order": 1,
+                        "trial_days_limit":"",
+                        "trial_credit_limit":"",
+                        "prepaid": {
+                            "service_credits": "500",
+                            "validity_changes": "Replace",
+                            "fixed_price": 0,
+                            "reset_credit_after": 0,
+                            "expiring_at": "0"
+                        }
+                    }
+                ]
+            }
+        ],
+        "type" : "add_on",
+        "add_on_id": "5"
+    },
+    {
+        "title": "PRO",
+        "description": "Up to 2000 Orders",
+        "validity": "onetime",
+        "custom_price": 49,
+        "scope": "global",
+        "sort_order": 6,
+        "marketplace": "amazon",
+        "source_marketplace":"shopify",
+        "target_marketplace":"amazon",
+        "discounts": [],
+        "badge": "",
+        "trial_days_limit":"",
+        "trial_credit_limit":"",
+        "services_groups": [
+            {
+                "title": "Order Management",
+                "description": "Order Management",
+                "services": [
+                    {
+                        "title": "Order Sync",
+                        "code": "upto_2000_orders",
+                        "type": "order_sync",
+                        "required": 1,
+                        "service_charge": "0",
+                        "expiring_at": "",
+                        "discounts": [],
+                        "sort_order": 1,
+                        "trial_days_limit":"",
+                        "trial_credit_limit":"",
+                        "prepaid": {
+                            "service_credits": "2000",
+                            "validity_changes": "Replace",
+                            "fixed_price": 0,
+                            "reset_credit_after": 0,
+                            "expiring_at": "0"
+                        }
+                    }
+                ]
+            }
+        ],
+        "type" : "add_on",
+        "add_on_id": "6"
+    }
+    ]
+    

@@ -1,0 +1,192 @@
+{
+  "General Queries" : [
+    {
+      "question" : "What are the eligibility requirements to get started with the app?",
+      "answer" : "<ul>\n                                    <li>You need a professional seller account with Amazon Central. Amazon charges a monthly subscription fee for this.</li>\n                                    <li>Your return policy must meet the Amazon return standards.</li>\n                                    <li>You must have an active Shopify subscription.</li>\n                                </ul>"
+    },
+    {
+      "question" : "Can we connect the Amazon pay account with the app?",
+      "answer" : "<ul><li>No, kindly connect Amazon Seller Central account with app for the proper syncing of inventory, products and order.</li></ul>"
+    },
+    {
+      "question" : "If we added multiple accounts, can we use them both simultaneously ?",
+      "answer" : "<ul>\n                                    <li>Yes, you can add multiple Amazon accounts, however, make sure that they belong to the same region.</li>\n                                </ul>"
+
+    },
+    {
+      "question" : "Why did CedCommerce extend the free subscription for the App?",
+      "answer" : "<ul>\n                                    <li>The decision to extend the free plan for an entire quarter has been made in light of several requests we received from the sellers who are just winding up the Holiday Season sales and getting over the prolonged hassle. Given that Q1 is the time during which sellers use the downtime to plan their budgets, implement upgrades, and strategize for the peaks of a year, it would be helpful if they can focus on comfortably establishing their Amazon business through the app without worrying about extra costs.</li>\n                                </ul>"
+    },
+    {
+      "question" : "What will be the pricing plan post Q1, 2022?",
+      "answer" : "<ul>\n                                    <li>Cedcommerce discloses the pricing plan of this Amazon app after 31st March. <a target='_blank' href='https://apps.cedcommerce.com/amazon-by-cedcommerce/'>Click Here</a> to know the app pricing, for any further queries you can directly contact to the support team.</li>\n                               </ul>"
+    },
+    {
+      "question" : "Is the Amazon by CedCommerce app reliable?",
+      "answer" : "<ul>\n                                    <li><ul>\n                                    <li>The native Shopify app for Amazon from CedCommerce is absolutely reliable and ever-evolving. By Q2, 2022, sellers will be able to enjoy even more amazing features enabling them to not just sell but improve their reach optimally. Additionally, the team at CedCommerce is dedicatedly working on making the app the best in the market and already receiving an incredible response from sellers using it currently.</li>\n                               </ul></li>\n                               </ul>"
+
+    }],
+
+  "Product Section": [
+    {
+      "question" : "How can I assign the categories to the product(s)?",
+      "answer" : "<p>There are two ways:</p><ul><li>In Bulk products<ul><li>Via Template Method-<ol><li>Visit Settings section</li><li>Click on Product Templates</li><li>Choose Custom templates Add new Template</li><li>Set the category & filter the products</li></ol></li></ul></li><li>Select the products<ol><li>Visit Listings section</li><li>Find the product</li><li>Click on the product row to edit</li><li>Set/assign the category & Attributes</li><li>Save</li></ol></li></ul>"
+
+    },
+    {
+
+      "question" : "In which section can we perform Attribute Mapping techniques?",
+      "answer" : "<ul><li>By assigning categories to the particular product, you can perform attribute mapping techniques.</li></ul>"
+    },
+    {
+      "question" : "What is the function of the Amazon Action key?",
+      "answer" : "<ul><li>There are two keys in Amazon. One is the “Match from Amazon” key and the other is the “Search from Amazon” key. Using the match from Amazon key you can simply match your products from the Amazon marketplace while the Search from Amazon key lets you list or create the offer of the products.</li></ul>"
+    },
+    {
+
+      "question" : "How can I delete products from Amazon via the app?",
+      "answer" : "<ul><li>To delete the products from Amazon, in the app you need to just select a product from the listing grid and simply delete the product from the “Actions” section.</li></ul>"
+    },
+    {
+
+      "question" : "How can I update the products title & description?",
+      "answer" : "<ul><li>Go to the <b>listings</b> section</li><li>Click on the particular product</li><li>Click on the radio button to set custom title and description</li><li>Hence, you can edit the product title and description.</li></ul>"
+    },
+    {
+
+      "question" : "What are the fields that we can use while filtering the products in the Listings section?",
+      "answer" : "<ul><li>The fields which you can use while filtering are Title, Inventory, SKU, Tags, Product Type, Vendor, Template Name, Status.</li></ul>"
+    },
+    {
+
+      "question" : "What are the fields which we can edit in a particular products section?",
+      "answer" : "<ul><li>Under the products section, the fields that you can edit are Title, Description, Handling Time, Variants, Add category.</li></ul>"
+    },
+    {
+
+      "question" : "Can I change the tags of products from the application?",
+      "answer" : "<ul><li>No, you can’t edit the tags from the application.</li></ul>"
+    },
+    {
+      "question" : "How does the Filter Section work under the Custom Templates?",
+      "answer" : "<ul><li>The filter option avails two conditions i.e. 'and' & 'or'.  If we talk about the “and” condition, it will help you add multiple conditions in a single group. Similarly, the 'or' condition will help you add multiple groups in a filter Condition of products.</li></ul>"
+    },
+    {
+
+      "question" : "How can I link my existing listing to Amazon via the app?",
+      "answer" : "<ul><li>To link the existing listing from Amazon you just need to run the “Match from Amazon” action in the Application.</li></ul>"
+    },
+    {
+      "question" : "Is it necessary to perform inventory syncing after Match from Amazon?",
+      "answer" : "Yes, it is mandatory to perform inventory syncing after Match from Amazon."
+    },
+    {
+
+      "question" : "What would be the product matching condition 'MATCH FROM AMAZON' & estimate the time for processing?",
+      "answer" : "<ul><li>While using “Match from Amazon” the matching will be done based on the SKUs. It should be the same in App & Amazon. You can update the SKU in APP (if you don’t want to update in Shopify). When you select a match from Amazon it takes approx 30-35 minutes to complete the process.</li></ul>"
+    },
+    {
+
+      "question" : "What would be the condition to sync product details from the app to amazon for the title, description?",
+      "answer" : "<ul><li>To sync all details related to the product from the application to Amazon, the merchant needs to assign a category and map the required Attributes accurately.</li></ul>"
+    },
+    {
+      "question" : "If a product is listed on Amazon with 2 variants & the seller added/updated the variant then how can it be synced with amazon?",
+      "answer" : "<ul><li>For that, the seller needs to sync the variants from the application to Amazon. The Merchant needs to delete the product from Amazon and needs to re-upload the product along with its revised variants. Thus, it will be uploaded on Amazon through our application.</li></ul>"
+    },
+    {
+      "question" : "What is Fulfillment center Id?",
+      "answer" : "<ul><li>Fulfillment center id means the Amazon fulfillment center’s ID which is a unique ID given to the fulfillment center’s of Amazon. This is done to identify the fulfillment center, which comes in the optional attributes section.  For eg- AMAZON_IN, AMAZON_EU</li></ul>"
+    },
+    {
+      "question" : "What is Variation theme?",
+      "answer" : "<ul><li>It is a part of an optional Attribute Mapping which helps to sync the variants of products from the application to Amazon. The most common are size and color.</li></ul>"
+    },
+    {
+
+      "question" : "What is Country of origin?",
+      "answer" : "<ul><li>Country of origin means the country where the product was issued.</li></ul>"
+    },
+    {
+
+      "question" : "What is Key product Feature?",
+      "answer" : "<ul><li>Key product features are the bullet points where we can add highlights of the product.</li></ul>"
+    },
+    {
+      "question" : "If you are unaware of the attribute_name then from where can you get the attributes definition?",
+      "answer" : "<ul><li>For that, you can simply log in to seller central. After logging in you can simply click on the inventory section, after that you can see an add via upload option, by clicking on it you will see a generate template option. After downloading the file, you can see the attribute names related to the product category.</li></ul><b>NAVIGATION : <br />Seller central>>Inventory>>Add via upload>>Select the type of product>>Generate template>>Download the file.</b>"
+    },
+    {
+      "question" : "How to apply for brand registry?",
+      "answer" : "For brand registry, kindly follow the below steps from Amazon seller account-<br/> Review eligibility requirements->Sign into Brand Registry -> Enroll your brand <br/> Below is the link- <a href='https://brandservices.amazon.com/brandregistry/eligibility' target='_blank'>https://brandservices.amazon.com/brandregistry/eligibility</a>"
+    },
+    {
+      "question" : "I am a new manufacturer(seller), and I want to sell on Amazon but I need to apply for barcode exemption. Where can I apply for the same? ",
+      "answer" : "You can apply for barcode exemption from the link below:<br/> <a href='https://sellercentral.amazon.com/gtinx' target='_blank'>https://sellercentral.amazon.com/gtinx</a>"
+    },
+    {
+      "question" : "What are the necessary things needed to keep in mind while facing the error of barcode exemption?",
+      "answer" : "Below are the necessary points that should keep in mind while facing the error of barcode exemption -<ol><li>Assign the mentioned category name.</li><li>Copy brand name from the barcode exemption e-mail (received from Amazon)  and brand name is case sensitive.</li><li>Country in which you are uploading shoul</li></ol>"
+    }
+  ],
+
+  "Shipment setting" : [
+    {
+
+      "question" : "What points should we consider while fulfilling orders right from the app?",
+      "answer" : "<ul><li>When you're fulfilling Amazon orders from Shopify, make sure that you follow Amazon's Seller Policies, and mark orders as fulfilled in Shopify within Amazon's required timelines.</li>"
+    }],
+  "Order Section" : [
+    {
+      "question" : "Where can I see the details related to Orders on Shopify?",
+      "answer" : "<ul><li>You can only see the orders under the ORDERS section of Shopify with the respective tag</li></ul>"
+    },
+    {
+      "question" : "Does this app automatically create Amazon orders in my Shopify Store?",
+      "answer" :  "<ul><li>Yes, whenever you receive an order on Amazon, the app will automatically create them on your Shopify Store but just make sure that your order setting is enabled from the app.</li></ul>"
+    },
+    {
+      "question" : "What happens when an order is received on the Amazon marketplace but the product does not exist on the Shopify store?",
+      "answer" :  "<ul><li>The app will fetch those orders from Amazon to App, but will not create them on the Shopify store unless you recreate the product on the Shopify store. The app keeps them under the “Failed orders” section.</li></ul>"
+    },
+    {
+      "question" : "What is the meaning of Failed orders",
+      "answer" :  "<ul><li>It simply means the orders which were received on Amazon but cannot be created on Shopify due to insufficient Inventory or Missing product details on Shopify, are aligned under Failed Orders.</li></ul>"
+    },
+    {
+      "question" : "My order(s) are not showing in the app or shopify store.",
+      "answer" :  "<ul><li><b>Case1)</b> Due to “pending” status of order on Amazon <br />When the order is placed on Amazon order will remain in pending status for 30 minutes, After 30 minutes order status will change from pending to Unshipped, As the order status is changed from pending it will get synced into the app.</li><li><b>Case2)</b> Due to insufficient stock <br />If a product has insufficient stock in Shopify to fulfill the Amazon order,  please check the overview section & see failed order details.  The app can not create orders in Shopify due to insufficient stock. Kindly provide the stock in Shopify, the app will sync the order with shopify.</li><li><b>Case3)</b> Due to unavailability of SKU in Shopify <br />If product sku is not available in Shopify, the app won’t be able to create those orders in Shopify.</li></ul>"
+    },{
+      "question" : "How does the app fetch the unshipped order from Amazon when seller connects the account with the app?",
+      "answer" :  "<ul><li>App fetches all the unshipped orders prior 2 hours after connecting the account with the app i.e. Amazon-> App -> Shopify.</li></ul>"
+    }],
+  "Errors" : [
+    {
+      "question" : "A value is missing from one or more required columns from this group: [Parentage = \"parent\"], [Variation Theme = null].",
+      "answer" : "<ul><li>{'Variation theme Attribute is missing> Kindly map the attribute from attribute mapping section.'}</li><li>Can contact us at <Link url='mailto:channel-support@cedcommerce.com' external removeUnderline>email</Link>/ <Link url='https://join.skype.com/xV5r9L7s6jFG' external removeUnderline>skype</Link>/  <Link url='https://chat.whatsapp.com/GOFQ2Gsg7rdBjBSzE9NGAA' external removeUnderline>whatsapp</Link> to get assistance.</li></ul>"
+    },
+    {
+      "question" : "A value is required in the \"Variation Theme\" field because there are values in dependent fields.: [Parentage = \"child\"], [Relationship Type = \"variation\"]",
+      "answer" : "<ul><li>{'Variation theme Attribute is missing> KIndly map the attribute from attribute mapping section.'}</li><li>Can contact us at <Link url='mailto:channel-support@cedcommerce.com' external removeUnderline>email</Link>/ <Link url='https://join.skype.com/xV5r9L7s6jFG' external removeUnderline>skype</Link>/  <Link url='https://chat.whatsapp.com/GOFQ2Gsg7rdBjBSzE9NGAA' external removeUnderline>whatsapp</Link> to get assistance.</li></ul>"
+    },
+    {
+      "question" : "The Standard Price field contains an invalid value: 0. The value \"0\" is lower than the minimum allowed: 0.01.",
+      "answer" : "<ul><li>The value of the price can not be lower than 0.01. Please update the price from the Shopify store.</li><li>Can contact us at <Link url='mailto:channel-support@cedcommerce.com' external removeUnderline>email</Link>/ <Link url='https://join.skype.com/xV5r9L7s6jFG' external removeUnderline>skype</Link>/  <Link url='https://chat.whatsapp.com/GOFQ2Gsg7rdBjBSzE9NGAA' external removeUnderline>whatsapp</Link> to get assistance.</li></ul>"
+    },
+    {
+      "question" : "Conflicting updates were detected and not processed. This occurs when conflicting values are provided for the same SKU in the same feed. Do not provide multiple values for the same attribute on a SKU to avoid seeing this error.",
+      "answer" : "<ul><li>The error occurs when you enter conflicting values for the same SKU. To avoid this error you need to provide unique values for each SKU.</li><li>Can contact us at <Link url='mailto:channel-support@cedcommerce.com' external removeUnderline>email</Link>/ <Link url='https://join.skype.com/xV5r9L7s6jFG' external removeUnderline>skype</Link>/  <Link url='https://chat.whatsapp.com/GOFQ2Gsg7rdBjBSzE9NGAA' external removeUnderline>whatsapp</Link> to get assistance.</li></ul>"
+    },
+    {
+      "question" : "A value is missing from one or more required columns from this group: [Product ID = \"dark-denim-top\"], [Product ID Type = null].",
+      "answer" : "<ul><li>Barcode is missing in product(s). Kindly update from the Shopify store.</li><li>Can contact us at <Link url='mailto:channel-support@cedcommerce.com' external removeUnderline>email</Link>/ <Link url='https://join.skype.com/xV5r9L7s6jFG' external removeUnderline>skype</Link>/  <Link url='https://chat.whatsapp.com/GOFQ2Gsg7rdBjBSzE9NGAA' external removeUnderline>whatsapp</Link> to get assistance.</li></ul>"
+    },
+    {
+      "question" : "A value is required for the 'Is Product Expirable' field.",
+      "answer" : "<ul><li>You need to map the required attribute from the attributes mapping section.</li><li>Can contact us at <Link url='mailto:channel-support@cedcommerce.com' external removeUnderline>email</Link>/ <Link url='https://join.skype.com/xV5r9L7s6jFG' external removeUnderline>skype</Link>/  <Link url='https://chat.whatsapp.com/GOFQ2Gsg7rdBjBSzE9NGAA' external removeUnderline>whatsapp</Link> to get assistance.</li></ul>"
+    },
+    {
+      "question" : "Product does not match ASIN.",
+      "answer" : "<ul><li>The image does not match the product associated with Amazon's existing ASIN. Associate the image with the correct ASIN and resubmit the image.</li><li>Can contact us at <Link url='mailto:channel-support@cedcommerce.com' external removeUnderline>email</Link>/ <Link url='https://join.skype.com/xV5r9L7s6jFG' external removeUnderline>skype</Link>/  <Link url='https://chat.whatsapp.com/GOFQ2Gsg7rdBjBSzE9NGAA' external removeUnderline>whatsapp</Link> to get assistance.</li></ul>"
+    }]
+}

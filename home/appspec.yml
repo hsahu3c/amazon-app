@@ -1,0 +1,20 @@
+version: 0.0
+os: linux
+files:
+   - source: /
+     destination: /var/www/html/remote/
+permissions:
+   - object: /var/www/html/remote/
+     pattern: "**"
+     owner: ubuntu
+     group: ubuntu
+     mode: 755
+     type:
+       - file
+hooks:
+   BeforeInstall:
+    - location: scripts/startnginx.sh
+      runas: root
+   AfterInstall:
+    - location: scripts/restartnginx.sh
+      runas: root

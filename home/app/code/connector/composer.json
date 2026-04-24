@@ -1,0 +1,16 @@
+{ 
+	"name": "cedcommerce/phalcon-module-connector", 
+	"description": "Phalcon Connector Module", 
+	"require": { 
+		"php": ">=5.6",
+		"mongodb/mongodb": "*",
+		"phalcon/incubator": "*"
+	},
+	"extra": {
+		"module": "connector"
+	},
+	"type": "ced-phalcon", 
+	"version": "0.0.2", 
+	"license": [ "EULA" ] 
+
+}

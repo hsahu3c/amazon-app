@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <script>
+        function showCard() {
+            let eventHandler = document.getElementById("event_handler");
+            let value = eventHandler.value;
+
+            if (value == "event_bridge") {
+                showEventBridgeCard();
+            }
+
+            if (value == "sqs") {
+                showSqsCard();
+            }
+
+            if (value == "api_endpoint") {
+                showApiEndPointCard();
+            }
+        }
+
+        function showSqsCard() {
+
+            sqsFields = `<div class="form-group pr-3 pl-3 pt-2 pb-2 border border-light rounded" id="sqs" style="background-color:#7A86B6">
+            <div class="d-flex justify-content-around mt-2">
+                <label for="" class="mr-3">Type</label>
+                <input type="text" class="form-control ml-5" id="region" name="destination_data[type]" placeholder="ex: sqs" required>
+            </div>
+           
+            <div class="d-flex justify-content-around mt-2">
+                <label for="">Region</label>
+                <input type="text" class="form-control ml-5" id="region" name="destination_data[sqs][region]" placeholder="Region" required>
+            </div>
+
+            <div class="d-flex justify-content-around mt-2">
+                <label for="" class="mr-4">Key</label>
+                <input type="password" class="form-control ml-5" id="key" name="destination_data[sqs][key]" placeholder="Key" required>
+            </div>
+
+            <div class="d-flex justify-content-around mt-2">
+                <label for="" class="mr-1">Secret</label>
+                <input type="password" class="form-control ml-5" id="secret" name="destination_data[sqs][secret]"  placeholder="Secret" required>
+            </div>
+
+            <div class="d-flex justify-content-around mt-2">
+                <label for="" class="">Queue Base Url</label>
+                <input type="text" class="form-control ml-2" id="queue_base_url" name="destination_data[sqs][queue_base_url]" placeholder="Queue Base Url" required>
+            </div> </div>`
+
+            document.getElementById('card').innerHTML = sqsFields;
+        }
+
+
+
+        function showEventBridgeCard(value) {
+
+            eventBridgeFields = `    <div class="form-group pr-3 pl-3 pt-2 pb-2 border border-light rounded"  id="event_bridge" style="background-color:#7A86B6" required>
+           
+            <div class="d-flex justify-content-around mt-2">
+                <label for="" class="mr-3">Type</label>
+                <input type="text" class="form-control ml-5" id="region" name="destination_data[type]" placeholder="ex: event_bridge" required>
+            </div>
+           
+            <div class="d-flex justify-content-around mt-2">
+                <label for="" class="">AccountID</label>
+                <input type="text" class="form-control ml-4" id="account_id" name="destination_data[event_bridge][account_id]"  placeholder="Account ID" required>
+            </div>
+
+            <div class="d-flex justify-content-around mt-2">
+                <label for="">Region</label>
+                <input type="text" class="form-control ml-5" id="region" name="destination_data[event_bridge][region]"  placeholder="Region" required>
+            </div>
+
+            <div class="d-flex justify-content-around mt-2">
+                <label for="" class="mr-4">Key</label>
+                <input type="password" class="form-control ml-5" id="key" name="destination_data[event_bridge][key]" placeholder="Key" required>
+            </div>
+
+            <div class="d-flex justify-content-around mt-2">
+                <label for="" class="mr-1">Secret</label>
+                <input type="password" class="form-control ml-5" id="secret" name="destination_data[event_bridge][secret]" placeholder="Secret" required>
+            </div> 
+            </div>`
+
+            document.getElementById('card').innerHTML = eventBridgeFields;
+        }
+
+
+        function showApiEndPointCard() {
+            apiFields = `<div class="form-group pr-3 pl-3 pt-2 pb-2 border border-light rounded " id="api_endpoint" style="background-color:#7A86B6">
+          
+            <div class="d-flex justify-content-around mt-2">
+                <label for="" class ="mr-6">Type </label>
+                <input type="text" class="form-control ml-5" id="region" name="destination_data[type]" placeholder="ex: api_endpoint" required>
+            </div>
+
+            <div class="d-flex justify-content-around mt-2">
+                <label for="" class="">APIEndPoint</label>
+                <input type="text" class="form-control ml-4" id="api_endpoint" name="destination_data[api_endpoint][endpoint]" placeholder="API EndPoint" required>
+            </div> </div>`;
+
+            document.getElementById('card').innerHTML = apiFields;
+        }
+    </script>
+
+    <meta charset="UTF-8">
+    <title>Create Event Destination Subscription</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body class="bg-dark">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <div class="container">
+        <?php echo $this->getContent(); ?>
+    </div>
+</body>
+
+</html>

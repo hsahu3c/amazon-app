@@ -1,0 +1,22 @@
+[
+  {"query": "fulfillments/update webhook hit our SQS but Amazon never got tracking—where in PHP does the action fulfillments_update get handled and what runs after order_container prepare?", "should_trigger": true},
+  {"query": "Trace ShipInterface mold then ShipmentV2 then Amazon ship for Shopify source orders; our queues are amazon_shopify_orders_fulfillments_create.", "should_trigger": true},
+  {"query": "Customer says partial fulfillments from Shopify are wrong on Amazon side; which class writes source_shipment and target_shipment in Mongo before Amazon?", "should_trigger": true},
+  {"query": "Debug: internal action is fulfillment_update (their words) and nothing routes—what is the correct action string for fulfillments/update?", "should_trigger": true},
+  {"query": "Where is initiateShipment and when does ShipmentV2 return before Amazon Service Shipment runs?", "should_trigger": true},
+  {"query": "Easy Ship order blocked during Amazon shipment sync—what file checks filter_tags?", "should_trigger": true},
+  {"query": "Need to understand shipmentServiceV2 and shipmentTransactionBetaUsers vs ShipmentV2 path in initiateShipment.", "should_trigger": true},
+  {"query": "Carrier mapping from Shopify tracking company to Amazon carrier code for confirmShipmentCall path.", "should_trigger": true},
+  {"query": "Same Fulfillment tried to re-attempt from logs—what Mongo checks produce that?", "should_trigger": true},
+  {"query": "shopify-amazon shipment sync skill: link amazon-sqs-consumer and shopify-webhook-handler-router for ingress only.", "should_trigger": true},
+  {"query": "Implement a fibonacci function in Python for an interview.", "should_trigger": false},
+  {"query": "Shopify product metafield CRON shopify:product-custom-metafield-sync stuck in RUNNING bulk operation.", "should_trigger": false},
+  {"query": "Register a new Shopify webhook topic for customer tags only—no shipment.", "should_trigger": false},
+  {"query": "Amazon SP-API listing quality notifications registration steps.", "should_trigger": false},
+  {"query": "Store closed after shop/update webhook—store close uninstall flow.", "should_trigger": false},
+  {"query": "Order cancel webhook orders/cancelled routing through connector SourceModel.", "should_trigger": false},
+  {"query": "Refund create refund_create flow and connector OrderRefund.", "should_trigger": false},
+  {"query": "Inventory levels update only—no fulfillment.", "should_trigger": false},
+  {"query": "Manual shipment CLI connector ManualShipmentCommand for a one-off test order.", "should_trigger": false},
+  {"query": "Explain DynamoDB async shipment feed Skill 7 Feed::process only.", "should_trigger": false}
+]

@@ -1,0 +1,23 @@
+{
+  "skill_name": "shopify-amazon-shipment-sync",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Trace what happens after Shopify sends fulfillments/update for a connected Amazon channel: from SQS through to Amazon. List the main PHP classes/methods in order and mention the internal action string (not fulfillment_update).",
+      "expected_output": "Mentions fulfillments_update, Hook moldWebhookData, connector SourceModel triggerWebhooks/initWebhook, Shopifyhome Components Order Shipment prepare, Connector Components Order Shipment initiateShipment, ShipmentV2 ship, Amazon Service Shipment ship.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Our shipment sync says Data not found right after prepare succeeds. Which marketplace ShipInterface method usually returns empty first, and which file implements mold for Shopify fulfillments?",
+      "expected_output": "Identifies source mold step; points to shopifyhome/Service/Shipment.php mold() and need for webhook data payload.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Where does the connector persist source_shipment and target_shipment documents before Amazon's ship() runs, and what class implements that middle ship()?",
+      "expected_output": "order_container / ShipmentV2; App\\Connector\\Service\\ShipmentV2::ship—not legacy Connector\\Service\\Shipment as primary doc target.",
+      "files": []
+    }
+  ]
+}

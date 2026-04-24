@@ -1,0 +1,2634 @@
+[{
+  "code": "free",
+  "title": "Free",
+  "description": "Up to 50 Orders",
+  "validity": 30,
+  "type": "plan",
+  "billed_type": "monthly",
+  "custom_price": 0,
+  "scope": "global",
+  "sort_order": 1,
+  "marketplace": "amazon",
+  "source_marketplace": "shopify",
+  "target_marketplace": "amazon",
+  "discounts": [],
+  "badge": "",
+  "trial_days_limit": "",
+  "trial_credit_limit": "",
+  "features": [
+    {
+      "feature": "No Extra order credits",
+      "description": "New orders will no longer be accepted after plan credits expire.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Bulk Upload (Upto 50 products)",
+      "description": "In the free plan, you can upload up to 50 products at a time.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "24/7 Email Support",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/email&chat.png"
+    },
+    {
+      "feature": "Connect multiple Amazon accounts globally",
+      "description": "Connect multiple Global Amazon accounts excluding Egypt, Saudi Arabia and Turkey.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/multipleAcc.png"
+    },
+    {
+      "feature": "Unlimited Listings",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "Refund Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Cancelled Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Inventory Control",
+      "description": "Control or customize your inventory as per your need.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/inventory.png"
+    },
+    {
+      "feature": "Currency Control",
+      "description": "Manage your currency if selling in different regions",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/currency.png"
+    },
+    {
+      "feature": "Link Existing Listings",
+      "description": "Link Shopify products with existing Amazon listings without hassle.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    }
+  ],
+  "services_groups": [
+    {
+      "title": "Order Management",
+      "description": "Order Management",
+      "services": [
+        {
+          "title": "Order Sync",
+          "code": "upto_50_orders",
+          "type": "order_sync",
+          "required": 1,
+          "service_charge": "0",
+          "expiring_at": "",
+          "discounts": [],
+          "sort_order": 1,
+          "trial_days_limit": "",
+          "trial_credit_limit": "",
+          "prepaid": {
+            "service_credits": 50,
+            "validity_changes": "Add",
+            "fixed_price": 0,
+            "reset_credit_after": 0,
+            "expiring_at": "0"
+          },
+          "postpaid": {
+            "per_unit_usage_price": "3",
+            "unit_qty": 10,
+            "capped_credit": 10,
+            "validity_changes": "Replace"
+          }
+        }
+      ]
+    }
+  ],
+  "plan_id": "1",
+  "category": "regular"
+},
+{
+  "code": "free",
+  "title": "Free",
+  "description": "Up to 50 Orders",
+  "validity": 365,
+  "type": "plan",
+  "billed_type": "yearly",
+  "custom_price": 0,
+  "scope": "global",
+  "sort_order": 1,
+  "marketplace": "amazon",
+  "source_marketplace": "shopify",
+  "target_marketplace": "amazon",
+  "discounts": [],
+  "badge": "",
+  "trial_days_limit": "",
+  "trial_credit_limit": "",
+  "features": [
+    {
+      "feature": "No Extra order credits",
+      "description": "New orders will no longer be accepted after plan credits expire.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Bulk Upload (Upto 50 products)",
+      "description": "In the free plan, you can upload up to 50 products at a time.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "24/7 Email Support",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/email&chat.png"
+    },
+    {
+      "feature": "Connect multiple Amazon accounts globally",
+      "description": "Connect multiple Global Amazon accounts excluding Egypt, Saudi Arabia and Turkey.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/multipleAcc.png"
+    },
+    {
+      "feature": "Unlimited Listings",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "Refund Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Cancelled Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Inventory Control",
+      "description": "Control or customize your inventory as per your need.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/inventory.png"
+    },
+    {
+      "feature": "Currency Control",
+      "description": "Manage your currency if selling in different regions",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/currency.png"
+    },
+    {
+      "feature": "Link Existing Listings",
+      "description": "Link Shopify products with existing Amazon listings without hassle.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    }
+  ],
+  "services_groups": [
+    {
+      "title": "Order Management",
+      "description": "Order Management",
+      "services": [
+        {
+          "title": "Order Sync",
+          "code": "upto_50_orders",
+          "type": "order_sync",
+          "required": 1,
+          "service_charge": "0",
+          "expiring_at": "",
+          "discounts": [],
+          "sort_order": 1,
+          "trial_days_limit": "",
+          "trial_credit_limit": "",
+          "prepaid": {
+            "service_credits": 50,
+            "validity_changes": "Add",
+            "fixed_price": 0,
+            "reset_credit_after": 0,
+            "expiring_at": "0"
+          },
+          "postpaid": {
+            "per_unit_usage_price": "3",
+            "unit_qty": 10,
+            "capped_credit": 10,
+            "validity_changes": "Replace"
+          }
+        }
+      ]
+    }
+  ],
+  "plan_id": "9",
+  "category": "regular"
+},
+{
+  "code": "beginner",
+  "title": "Beginner",
+  "description": "Up to 100 Orders",
+  "validity": 30,
+  "type": "plan",
+  "billed_type": "monthly",
+  "custom_price": 15,
+  "scope": "global",
+  "sort_order": 3,
+  "marketplace": "amazon",
+  "source_marketplace": "shopify",
+  "target_marketplace": "amazon",
+  "discounts": [],
+  "badge": "",
+  "features": [
+    {
+      "feature": "Manage 2x order credits",
+      "description": "Continue receiving new orders after exhausting credits. $3 charge for every 10 orders synced beyond plan limit.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Unlimited Bulk Upload",
+      "description": "In the free plan, you can only upload up to 50 products at a time; however, in this plan, you can upload as many products as you need.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "24/7 Email & Chat Support",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/email&chat.png"
+    },
+    {
+      "feature": "Connect multiple Amazon accounts globally",
+      "description": "Connect multiple Global Amazon accounts excluding Egypt, Saudi Arabia and Turkey.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/multipleAcc.png"
+    },
+    {
+      "feature": "Inventory Control",
+      "description": "Control or customize your inventory as per your need.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/inventory.png"
+    },
+    {
+      "feature": "Link Existing Listings",
+      "description": "Link Shopify products with existing Amazon listings without hassle.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Currency Control",
+      "description": "Manage your currency if selling in different regions",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/currency.png"
+    },
+    {
+      "feature": "Unlimited Listings",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "Refund Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Cancelled Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Dedicated Account Manager",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/email&chat.png"
+    }
+  ],
+  "services_groups": [
+    {
+      "title": "Order Management",
+      "description": "Order Management",
+      "services": [
+        {
+          "title": "Order Sync",
+          "code": "upto_100_orders",
+          "type": "order_sync",
+          "required": 1,
+          "service_charge": "0",
+          "expiring_at": "",
+          "discounts": [],
+          "sort_order": 1,
+          "trial_days_limit": "",
+          "trial_credit_limit": "",
+          "prepaid": {
+            "service_credits": 100,
+            "validity_changes": "Add",
+            "fixed_price": 0,
+            "reset_credit_after": 0,
+            "expiring_at": "0"
+          },
+          "postpaid": {
+            "per_unit_usage_price": "3",
+            "unit_qty": 10,
+            "capped_credit": 100,
+            "validity_changes": "Replace"
+          }
+        }
+      ]
+    }
+  ],
+  "plan_id": "2",
+  "category": "regular"
+},
+{
+
+  "code": "beginner",
+  "title": "Beginner",
+  "description": "Up to 100 Orders",
+  "validity": 365,
+  "type": "plan",
+  "billed_type": "yearly",
+  "custom_price": 180,
+  "scope": "global",
+  "sort_order": 3,
+  "marketplace": "amazon",
+  "source_marketplace": "shopify",
+  "target_marketplace": "amazon",
+  "discounts": [
+    {
+      "name": "Yearly Offer",
+      "type": "fixed",
+      "value": "15"
+    }
+  ],
+  "badge": "",
+  "features": [
+    {
+      "feature": "Manage 2x order credits",
+      "description": "Continue receiving new orders after exhausting credits. $3 charge for every 10 orders synced beyond plan limit.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Unlimited Bulk Upload",
+      "description": "In the free plan, you can only upload up to 50 products at a time; however, in this plan, you can upload as many products as you need.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "24/7 Email & Chat Support",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/email&chat.png"
+    },
+    {
+      "feature": "Connect multiple Amazon accounts globally",
+      "description": "Connect multiple Global Amazon accounts excluding Egypt, Saudi Arabia and Turkey.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/multipleAcc.png"
+    },
+    {
+      "feature": "Inventory Control",
+      "description": "Control or customize your inventory as per your need.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/inventory.png"
+    },
+    {
+      "feature": "Link Existing Listings",
+      "description": "Link Shopify products with existing Amazon listings without hassle.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Currency Control",
+      "description": "Manage your currency if selling in different regions",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/currency.png"
+    },
+    {
+      "feature": "Unlimited Listings",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "Refund Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Cancelled Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Dedicated Account Manager",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/email&chat.png"
+    }
+  ],
+  "services_groups": [
+    {
+      "title": "Order Management",
+      "description": "Order Management",
+      "services": [
+        {
+          "title": "Order Sync",
+          "code": "upto_100_orders",
+          "type": "order_sync",
+          "required": 1,
+          "service_charge": "0",
+          "expiring_at": "",
+          "discounts": [],
+          "sort_order": 1,
+          "trial_days_limit": "",
+          "trial_credit_limit": "",
+          "prepaid": {
+            "service_credits": 100,
+            "validity_changes": "Add",
+            "fixed_price": 0,
+            "reset_credit_after": 0,
+            "expiring_at": "0"
+          },
+          "postpaid": {
+            "per_unit_usage_price": "3",
+            "unit_qty": 10,
+            "capped_credit": 100,
+            "validity_changes": "Replace"
+          }
+        }
+      ]
+    }
+  ],
+  "plan_id": "10",
+  "category": "regular"
+},
+{
+ 
+  "code": "startup",
+  "title": "Startup",
+  "description": "Up to 500 Orders",
+  "validity": 30,
+  "type": "plan",
+  "billed_type": "monthly",
+  "custom_price": 49,
+  "scope": "global",
+  "sort_order": 2,
+  "marketplace": "amazon",
+  "source_marketplace": "shopify",
+  "target_marketplace": "amazon",
+  "discounts": [],
+  "badge": "Popular",
+  "features": [
+    {
+      "feature": "Manage 2x order credits",
+      "description": "Continue receiving new orders after exhausting credits. $3 charge for every 10 orders synced beyond plan limit.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Unlimited Bulk Upload",
+      "description": "In the free plan, you can only upload up to 50 products at a time; however, in this plan, you can upload as many products as you need.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "24/7 Email & Chat Support",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/email&chat.png"
+    },
+    {
+      "feature": "Connect multiple Amazon accounts globally",
+      "description": "Connect multiple Global Amazon accounts excluding Egypt, Saudi Arabia and Turkey.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/multipleAcc.png"
+    },
+    {
+      "feature": "Inventory Control",
+      "description": "Control or customize your inventory as per your need.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/inventory.png"
+    },
+    {
+      "feature": "Link Existing Listings",
+      "description": "Link Shopify products with existing Amazon listings without hassle.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Currency Control",
+      "description": "Manage your currency if selling in different regions",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/currency.png"
+    },
+    {
+      "feature": "Unlimited Listings",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "Refund Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Cancelled Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Dedicated Account Manager",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/email&chat.png"
+    }
+  ],
+  "trial_days_limit": "",
+  "trial_credit_limit": "",
+  "services_groups": [
+    {
+      "title": "Order Management",
+      "description": "Order Management",
+      "services": [
+        {
+          "title": "Order Sync",
+          "code": "upto_500_orders",
+          "type": "order_sync",
+          "required": 1,
+          "service_charge": "0",
+          "expiring_at": "",
+          "discounts": [],
+          "sort_order": 1,
+          "trial_days_limit": "",
+          "trial_credit_limit": "",
+          "prepaid": {
+            "service_credits": 500,
+            "validity_changes": "Add",
+            "fixed_price": 0,
+            "reset_credit_after": 0,
+            "expiring_at": "0"
+          },
+          "postpaid": {
+            "per_unit_usage_price": "3",
+            "unit_qty": 10,
+            "capped_credit": 500,
+            "validity_changes": "Replace"
+          }
+        }
+      ]
+    }
+  ],
+  "plan_id": "3",
+  "category": "regular"
+},
+{
+
+  "code": "startup",
+  "title": "Startup",
+  "description": "Up to 500 Orders",
+  "validity": 30,
+  "custom_price": 588,
+  "type": "plan",
+  "billed_type": "yearly",
+  "scope": "global",
+  "sort_order": 2,
+  "marketplace": "amazon",
+  "source_marketplace": "shopify",
+  "target_marketplace": "amazon",
+  "discounts": [
+    {
+      "name": "Yearly Offer",
+      "type": "fixed",
+      "value": "49"
+    }
+  ],
+  "badge": "Popular",
+  "features": [
+    {
+      "feature": "Manage 2x order credits",
+      "description": "Continue receiving new orders after exhausting credits. $3 charge for every 10 orders synced beyond plan limit.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Unlimited Bulk Upload",
+      "description": "In the free plan, you can only upload up to 50 products at a time; however, in this plan, you can upload as many products as you need.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "24/7 Email & Chat Support",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/email&chat.png"
+    },
+    {
+      "feature": "Connect multiple Amazon accounts globally",
+      "description": "Connect multiple Global Amazon accounts excluding Egypt, Saudi Arabia and Turkey.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/multipleAcc.png"
+    },
+    {
+      "feature": "Inventory Control",
+      "description": "Control or customize your inventory as per your need.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/inventory.png"
+    },
+    {
+      "feature": "Link Existing Listings",
+      "description": "Link Shopify products with existing Amazon listings without hassle.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Currency Control",
+      "description": "Manage your currency if selling in different regions",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/currency.png"
+    },
+    {
+      "feature": "Unlimited Listings",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "Refund Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Cancelled Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Dedicated Account Manager",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/email&chat.png"
+    }
+  ],
+  "trial_days_limit": "",
+  "trial_credit_limit": "",
+  "services_groups": [
+    {
+      "title": "Order Management",
+      "description": "Order Management",
+      "services": [
+        {
+          "title": "Order Sync",
+          "code": "upto_500_orders",
+          "type": "order_sync",
+          "required": 1,
+          "service_charge": "0",
+          "expiring_at": "",
+          "discounts": [],
+          "sort_order": 1,
+          "trial_days_limit": "",
+          "trial_credit_limit": "",
+          "prepaid": {
+            "service_credits": 500,
+            "validity_changes": "Add",
+            "fixed_price": 0,
+            "reset_credit_after": 0,
+            "expiring_at": "0"
+          },
+          "postpaid": {
+            "per_unit_usage_price": "3",
+            "unit_qty": 10,
+            "capped_credit": 500,
+            "validity_changes": "Replace"
+          }
+        }
+      ]
+    }
+  ],
+  "plan_id": "11",
+  "category": "regular"
+},
+{
+
+  "code": "scale",
+  "title": "Scale",
+  "description": "Up to 1000 Orders",
+  "validity": 30,
+  "type": "plan",
+  "billed_type": "monthly",
+  "custom_price": 89,
+  "scope": "global",
+  "sort_order": 4,
+  "marketplace": "amazon",
+  "source_marketplace": "shopify",
+  "target_marketplace": "amazon",
+  "discounts": [],
+  "badge": "",
+  "features": [
+    {
+      "feature": "Manage 2x order credits",
+      "description": "Continue receiving new orders after exhausting credits. $3 charge for every 10 orders synced beyond plan limit.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Unlimited Bulk Upload",
+      "description": "In the free plan, you can only upload up to 50 products at a time; however, in this plan, you can upload as many products as you need.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "24/7 Email & Chat Support",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/email&chat.png"
+    },
+    {
+      "feature": "Connect multiple Amazon accounts globally",
+      "description": "Connect multiple Global Amazon accounts excluding Egypt, Saudi Arabia and Turkey.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/multipleAcc.png"
+    },
+    {
+      "feature": "Inventory Control",
+      "description": "Control or customize your inventory as per your need.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/inventory.png"
+    },
+    {
+      "feature": "Link Existing Listings",
+      "description": "Link Shopify products with existing Amazon listings without hassle.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Currency Control",
+      "description": "Manage your currency if selling in different regions",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/currency.png"
+    },
+    {
+      "feature": "Unlimited Listings",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "Refund Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Cancelled Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Dedicated Account Manager",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/email&chat.png"
+    }
+  ],
+  "trial_days_limit": "",
+  "trial_credit_limit": "",
+  "services_groups": [
+    {
+      "title": "Order Management",
+      "description": "Order Management",
+      "services": [
+        {
+          "title": "Order Sync",
+          "code": "upto_1000_orders",
+          "type": "order_sync",
+          "required": 1,
+          "service_charge": "0",
+          "expiring_at": "",
+          "discounts": [],
+          "sort_order": 1,
+          "trial_days_limit": "",
+          "trial_credit_limit": "",
+          "prepaid": {
+            "service_credits": 1000,
+            "validity_changes": "Add",
+            "fixed_price": 0,
+            "reset_credit_after": 0,
+            "expiring_at": "0"
+          },
+          "postpaid": {
+            "per_unit_usage_price": "3",
+            "unit_qty": 10,
+            "capped_credit": 1000,
+            "validity_changes": "Replace"
+          }
+        }
+      ]
+    }
+  ],
+  "plan_id": "4",
+  "category": "regular"
+},
+{
+
+  "code": "scale",
+  "title": "Scale",
+  "description": "Up to 1000 Orders",
+  "validity": 365,
+  "type": "plan",
+  "billed_type": "yearly",
+  "custom_price": 1068,
+  "scope": "global",
+  "sort_order": 4,
+  "marketplace": "amazon",
+  "source_marketplace": "shopify",
+  "target_marketplace": "amazon",
+  "discounts": [
+    {
+      "name": "Yearly Offer",
+      "type": "fixed",
+      "value": "89"
+    }
+  ],
+  "badge": "",
+  "features": [
+    {
+      "feature": "Manage 2x order credits",
+      "description": "Continue receiving new orders after exhausting credits. $3 charge for every 10 orders synced beyond plan limit.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Unlimited Bulk Upload",
+      "description": "In the free plan, you can only upload up to 50 products at a time; however, in this plan, you can upload as many products as you need.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "24/7 Email & Chat Support",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/email&chat.png"
+    },
+    {
+      "feature": "Connect multiple Amazon accounts globally",
+      "description": "Connect multiple Global Amazon accounts excluding Egypt, Saudi Arabia and Turkey.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/multipleAcc.png"
+    },
+    {
+      "feature": "Inventory Control",
+      "description": "Control or customize your inventory as per your need.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/inventory.png"
+    },
+    {
+      "feature": "Link Existing Listings",
+      "description": "Link Shopify products with existing Amazon listings without hassle.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Currency Control",
+      "description": "Manage your currency if selling in different regions",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/currency.png"
+    },
+    {
+      "feature": "Unlimited Listings",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "Refund Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Cancelled Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Dedicated Account Manager",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/email&chat.png"
+    }
+  ],
+  "trial_days_limit": "",
+  "trial_credit_limit": "",
+  "services_groups": [
+    {
+      "title": "Order Management",
+      "description": "Order Management",
+      "services": [
+        {
+          "title": "Order Sync",
+          "code": "upto_1000_orders",
+          "type": "order_sync",
+          "required": 1,
+          "service_charge": "0",
+          "expiring_at": "",
+          "discounts": [],
+          "sort_order": 1,
+          "trial_days_limit": "",
+          "trial_credit_limit": "",
+          "prepaid": {
+            "service_credits": 1000,
+            "validity_changes": "Add",
+            "fixed_price": 0,
+            "reset_credit_after": 0,
+            "expiring_at": "0"
+          },
+          "postpaid": {
+            "per_unit_usage_price": "3",
+            "unit_qty": 10,
+            "capped_credit": 1000,
+            "validity_changes": "Replace"
+          }
+        }
+      ]
+    }
+  ],
+  "plan_id": "12",
+  "category": "regular"
+},
+{
+ 
+  "code": "growth",
+  "title": "Growth",
+  "description": "Up to 2500 Orders",
+  "validity": 30,
+  "type": "plan",
+  "billed_type": "monthly",
+  "custom_price": 189,
+  "scope": "global",
+  "sort_order": 5,
+  "marketplace": "amazon",
+  "source_marketplace": "shopify",
+  "target_marketplace": "amazon",
+  "discounts": [],
+  "badge": "",
+  "features": [
+    {
+      "feature": "Manage 2x order credits",
+      "description": "Continue receiving new orders after exhausting credits. $3 charge for every 10 orders synced beyond plan limit.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Unlimited Bulk Upload",
+      "description": "In the free plan, you can only upload up to 50 products at a time; however, in this plan, you can upload as many products as you need.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "24/7 Email & Chat Support",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/email&chat.png"
+    },
+    {
+      "feature": "Connect multiple Amazon accounts globally",
+      "description": "Connect multiple Global Amazon accounts excluding Egypt, Saudi Arabia and Turkey.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/multipleAcc.png"
+    },
+    {
+      "feature": "Inventory Control",
+      "description": "Control or customize your inventory as per your need.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/inventory.png"
+    },
+    {
+      "feature": "Link Existing Listings",
+      "description": "Link Shopify products with existing Amazon listings without hassle.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Currency Control",
+      "description": "Manage your currency if selling in different regions",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/currency.png"
+    },
+    {
+      "feature": "Unlimited Listings",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "Refund Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Cancelled Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Dedicated Account Manager",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/email&chat.png"
+    }
+  ],
+  "trial_days_limit": "",
+  "trial_credit_limit": "",
+  "services_groups": [
+    {
+      "title": "Order Management",
+      "description": "Order Management",
+      "services": [
+        {
+          "title": "Order Sync",
+          "code": "upto_2500_orders",
+          "type": "order_sync",
+          "required": 1,
+          "service_charge": "0",
+          "expiring_at": "",
+          "discounts": [],
+          "sort_order": 1,
+          "trial_days_limit": "",
+          "trial_credit_limit": "",
+          "prepaid": {
+            "service_credits": 2500,
+            "validity_changes": "Add",
+            "fixed_price": 0,
+            "reset_credit_after": 0,
+            "expiring_at": "0"
+          },
+          "postpaid": {
+            "per_unit_usage_price": "3",
+            "unit_qty": 10,
+            "capped_credit": 2500,
+            "validity_changes": "Replace"
+          }
+        }
+      ]
+    }
+  ],
+  "plan_id": "5",
+  "category": "regular"
+},
+{
+
+  "code": "growth",
+  "title": "Growth",
+  "description": "Up to 2500 Orders",
+  "validity": 365,
+  "type": "plan",
+  "billed_type": "yearly",
+  "custom_price": 2268,
+  "scope": "global",
+  "sort_order": 5,
+  "marketplace": "amazon",
+  "source_marketplace": "shopify",
+  "target_marketplace": "amazon",
+  "discounts": [
+    {
+      "name": "Yearly Offer",
+      "type": "fixed",
+      "value": "189"
+    }
+  ],
+  "badge": "",
+  "features": [
+    {
+      "feature": "Manage 2x order credits",
+      "description": "Continue receiving new orders after exhausting credits. $3 charge for every 10 orders synced beyond plan limit.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Unlimited Bulk Upload",
+      "description": "In the free plan, you can only upload up to 50 products at a time; however, in this plan, you can upload as many products as you need.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "24/7 Email & Chat Support",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/email&chat.png"
+    },
+    {
+      "feature": "Connect multiple Amazon accounts globally",
+      "description": "Connect multiple Global Amazon accounts excluding Egypt, Saudi Arabia and Turkey.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/multipleAcc.png"
+    },
+    {
+      "feature": "Inventory Control",
+      "description": "Control or customize your inventory as per your need.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/inventory.png"
+    },
+    {
+      "feature": "Link Existing Listings",
+      "description": "Link Shopify products with existing Amazon listings without hassle.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Currency Control",
+      "description": "Manage your currency if selling in different regions",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/currency.png"
+    },
+    {
+      "feature": "Unlimited Listings",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "Refund Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Cancelled Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Dedicated Account Manager",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/email&chat.png"
+    }
+  ],
+  "trial_days_limit": "",
+  "trial_credit_limit": "",
+  "services_groups": [
+    {
+      "title": "Order Management",
+      "description": "Order Management",
+      "services": [
+        {
+          "title": "Order Sync",
+          "code": "upto_2500_orders",
+          "type": "order_sync",
+          "required": 1,
+          "service_charge": "0",
+          "expiring_at": "",
+          "discounts": [],
+          "sort_order": 1,
+          "trial_days_limit": "",
+          "trial_credit_limit": "",
+          "prepaid": {
+            "service_credits": 2500,
+            "validity_changes": "Add",
+            "fixed_price": 0,
+            "reset_credit_after": 0,
+            "expiring_at": "0"
+          },
+          "postpaid": {
+            "per_unit_usage_price": "3",
+            "unit_qty": 10,
+            "capped_credit": 2500,
+            "validity_changes": "Replace"
+          }
+        }
+      ]
+    }
+  ],
+  "plan_id": "13",
+  "category": "regular"
+},
+{
+
+  "code": "advanced",
+  "title": "Advanced",
+  "description": "Up to 5000 Orders",
+  "validity": 30,
+  "type": "plan",
+  "billed_type": "monthly",
+  "custom_price": 289,
+  "scope": "global",
+  "sort_order": 6,
+  "marketplace": "amazon",
+  "source_marketplace": "shopify",
+  "target_marketplace": "amazon",
+  "discounts": [],
+  "badge": "",
+  "features": [
+    {
+      "feature": "Manage 2x order credits",
+      "description": "Continue receiving new orders after exhausting credits. $3 charge for every 10 orders synced beyond plan limit.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Unlimited Bulk Upload",
+      "description": "In the free plan, you can only upload up to 50 products at a time; however, in this plan, you can upload as many products as you need.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "24/7 Email & Chat Support",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/email&chat.png"
+    },
+    {
+      "feature": "Connect multiple Amazon accounts globally",
+      "description": "Connect multiple Global Amazon accounts excluding Egypt, Saudi Arabia and Turkey.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/multipleAcc.png"
+    },
+    {
+      "feature": "Inventory Control",
+      "description": "Control or customize your inventory as per your need.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/inventory.png"
+    },
+    {
+      "feature": "Link Existing Listings",
+      "description": "Link Shopify products with existing Amazon listings without hassle.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Currency Control",
+      "description": "Manage your currency if selling in different regions",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/currency.png"
+    },
+    {
+      "feature": "Unlimited Listings",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "Refund Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Cancelled Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Dedicated Account Manager",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/email&chat.png"
+    }
+  ],
+  "trial_days_limit": "",
+  "trial_credit_limit": "",
+  "services_groups": [
+    {
+      "title": "Order Management",
+      "description": "Order Management",
+      "services": [
+        {
+          "title": "Order Sync",
+          "code": "upto_5000_orders",
+          "type": "order_sync",
+          "required": 1,
+          "service_charge": "0",
+          "expiring_at": "",
+          "discounts": [],
+          "sort_order": 1,
+          "trial_days_limit": "",
+          "trial_credit_limit": "",
+          "prepaid": {
+            "service_credits": 5000,
+            "validity_changes": "Add",
+            "fixed_price": 0,
+            "reset_credit_after": 0,
+            "expiring_at": "0"
+          },
+          "postpaid": {
+            "per_unit_usage_price": "3",
+            "unit_qty": 10,
+            "capped_credit": 5000,
+            "validity_changes": "Replace"
+          }
+        }
+      ]
+    }
+  ],
+  "plan_id": "6",
+  "category": "regular"
+},
+{
+ 
+  "code": "advanced",
+  "title": "Advanced",
+  "description": "Up to 5000 Orders",
+  "validity": 365,
+  "type": "plan",
+  "billed_type": "yearly",
+  "custom_price": 3468,
+  "scope": "global",
+  "sort_order": 6,
+  "marketplace": "amazon",
+  "source_marketplace": "shopify",
+  "target_marketplace": "amazon",
+  "discounts": [
+    {
+      "name": "Yearly Offer",
+      "type": "fixed",
+      "value": "289"
+    }
+  ],
+  "badge": "",
+  "features": [
+    {
+      "feature": "Manage 2x order credits",
+      "description": "Continue receiving new orders after exhausting credits. $3 charge for every 10 orders synced beyond plan limit.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Unlimited Bulk Upload",
+      "description": "In the free plan, you can only upload up to 50 products at a time; however, in this plan, you can upload as many products as you need.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "24/7 Email & Chat Support",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/email&chat.png"
+    },
+    {
+      "feature": "Connect multiple Amazon accounts globally",
+      "description": "Connect multiple Global Amazon accounts excluding Egypt, Saudi Arabia and Turkey.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/multipleAcc.png"
+    },
+    {
+      "feature": "Inventory Control",
+      "description": "Control or customize your inventory as per your need.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/inventory.png"
+    },
+    {
+      "feature": "Link Existing Listings",
+      "description": "Link Shopify products with existing Amazon listings without hassle.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Currency Control",
+      "description": "Manage your currency if selling in different regions",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/currency.png"
+    },
+    {
+      "feature": "Unlimited Listings",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "Refund Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Cancelled Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Dedicated Account Manager",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/email&chat.png"
+    }
+  ],
+  "trial_days_limit": "",
+  "trial_credit_limit": "",
+  "services_groups": [
+    {
+      "title": "Order Management",
+      "description": "Order Management",
+      "services": [
+        {
+          "title": "Order Sync",
+          "code": "upto_5000_orders",
+          "type": "order_sync",
+          "required": 1,
+          "service_charge": "0",
+          "expiring_at": "",
+          "discounts": [],
+          "sort_order": 1,
+          "trial_days_limit": "",
+          "trial_credit_limit": "",
+          "prepaid": {
+            "service_credits": 5000,
+            "validity_changes": "Add",
+            "fixed_price": 0,
+            "reset_credit_after": 0,
+            "expiring_at": "0"
+          },
+          "postpaid": {
+            "per_unit_usage_price": "3",
+            "unit_qty": 10,
+            "capped_credit": 5000,
+            "validity_changes": "Replace"
+          }
+        }
+      ]
+    }
+  ],
+  "plan_id": "14",
+  "category": "regular"
+},
+{
+ 
+  "code": "professional",
+  "title": "Professional",
+  "description": "Up to 7500 Orders",
+  "validity": 30,
+  "type": "plan",
+  "billed_type": "monthly",
+  "custom_price": 489,
+  "scope": "global",
+  "sort_order": 7,
+  "marketplace": "amazon",
+  "source_marketplace": "shopify",
+  "target_marketplace": "amazon",
+  "discounts": [],
+  "badge": "",
+  "features": [
+    {
+      "feature": "Manage 2x order credits",
+      "description": "Continue receiving new orders after exhausting credits. $3 charge for every 10 orders synced beyond plan limit.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Unlimited Bulk Upload",
+      "description": "In the free plan, you can only upload up to 50 products at a time; however, in this plan, you can upload as many products as you need.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "24/7 Email & Chat Support",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/email&chat.png"
+    },
+    {
+      "feature": "Connect multiple Amazon accounts globally",
+      "description": "Connect multiple Global Amazon accounts excluding Egypt, Saudi Arabia and Turkey.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/multipleAcc.png"
+    },
+    {
+      "feature": "Inventory Control",
+      "description": "Control or customize your inventory as per your need.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/inventory.png"
+    },
+    {
+      "feature": "Link Existing Listings",
+      "description": "Link Shopify products with existing Amazon listings without hassle.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Currency Control",
+      "description": "Manage your currency if selling in different regions",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/currency.png"
+    },
+    {
+      "feature": "Unlimited Listings",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "Refund Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Cancelled Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Dedicated Account Manager",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/email&chat.png"
+    }
+  ],
+  "trial_days_limit": "",
+  "trial_credit_limit": "",
+  "services_groups": [
+    {
+      "title": "Order Management",
+      "description": "Order Management",
+      "services": [
+        {
+          "title": "Order Sync",
+          "code": "upto_7500_orders",
+          "type": "order_sync",
+          "required": 1,
+          "service_charge": "0",
+          "expiring_at": "",
+          "discounts": [],
+          "sort_order": 1,
+          "trial_days_limit": "",
+          "trial_credit_limit": "",
+          "prepaid": {
+            "service_credits": 7500,
+            "validity_changes": "Add",
+            "fixed_price": 0,
+            "reset_credit_after": 0,
+            "expiring_at": "0"
+          },
+          "postpaid": {
+            "per_unit_usage_price": "3",
+            "unit_qty": 10,
+            "capped_credit": 7500,
+            "validity_changes": "Replace"
+          }
+        }
+      ]
+    }
+  ],
+  "plan_id": "7",
+  "category": "regular"
+},
+{
+  
+  "code": "professional",
+  "title": "Professional",
+  "description": "Up to 7500 Orders",
+  "validity": 365,
+  "type": "plan",
+  "billed_type": "yearly",
+  "custom_price": 5868,
+  "scope": "global",
+  "sort_order": 7,
+  "marketplace": "amazon",
+  "source_marketplace": "shopify",
+  "target_marketplace": "amazon",
+  "discounts": [
+    {
+      "name": "Yearly Offer",
+      "type": "fixed",
+      "value": "489"
+    }
+  ],
+  "features": [
+    {
+      "feature": "Manage 2x order credits",
+      "description": "Continue receiving new orders after exhausting credits. $3 charge for every 10 orders synced beyond plan limit.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Unlimited Bulk Upload",
+      "description": "In the free plan, you can only upload up to 50 products at a time; however, in this plan, you can upload as many products as you need.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "24/7 Email & Chat Support",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/email&chat.png"
+    },
+    {
+      "feature": "Connect multiple Amazon accounts globally",
+      "description": "Connect multiple Global Amazon accounts excluding Egypt, Saudi Arabia and Turkey.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/multipleAcc.png"
+    },
+    {
+      "feature": "Inventory Control",
+      "description": "Control or customize your inventory as per your need.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/inventory.png"
+    },
+    {
+      "feature": "Link Existing Listings",
+      "description": "Link Shopify products with existing Amazon listings without hassle.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Currency Control",
+      "description": "Manage your currency if selling in different regions",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/currency.png"
+    },
+    {
+      "feature": "Unlimited Listings",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "Refund Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Cancelled Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Dedicated Account Manager",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/email&chat.png"
+    }
+  ],
+  "badge": "",
+  "trial_days_limit": "",
+  "trial_credit_limit": "",
+  "services_groups": [
+    {
+      "title": "Order Management",
+      "description": "Order Management",
+      "services": [
+        {
+          "title": "Order Sync",
+          "code": "upto_7500_orders",
+          "type": "order_sync",
+          "required": 1,
+          "service_charge": "0",
+          "expiring_at": "",
+          "discounts": [],
+          "sort_order": 1,
+          "trial_days_limit": "",
+          "trial_credit_limit": "",
+          "prepaid": {
+            "service_credits": 7500,
+            "validity_changes": "Add",
+            "fixed_price": 0,
+            "reset_credit_after": 0,
+            "expiring_at": "0"
+          },
+          "postpaid": {
+            "per_unit_usage_price": "3",
+            "unit_qty": 10,
+            "capped_credit": 7500,
+            "validity_changes": "Replace"
+          }
+        }
+      ]
+    }
+  ],
+  "plan_id": "15",
+  "category": "regular"
+},
+{
+ 
+  "code": "premium",
+  "title": "Premium",
+  "description": "Up to 15000 Orders",
+  "validity": 30,
+  "type": "plan",
+  "billed_type": "monthly",
+  "custom_price": 689,
+  "scope": "global",
+  "sort_order": 8,
+  "marketplace": "amazon",
+  "source_marketplace": "shopify",
+  "target_marketplace": "amazon",
+  "discounts": [],
+  "features": [
+    {
+      "feature": "Manage 2x order credits",
+      "description": "Continue receiving new orders after exhausting credits. $3 charge for every 10 orders synced beyond plan limit.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Unlimited Bulk Upload",
+      "description": "In the free plan, you can only upload up to 50 products at a time; however, in this plan, you can upload as many products as you need.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "24/7 Email & Chat Support",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/email&chat.png"
+    },
+    {
+      "feature": "Connect multiple Amazon accounts globally",
+      "description": "Connect multiple Global Amazon accounts excluding Egypt, Saudi Arabia and Turkey.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/multipleAcc.png"
+    },
+    {
+      "feature": "Inventory Control",
+      "description": "Control or customize your inventory as per your need.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/inventory.png"
+    },
+    {
+      "feature": "Link Existing Listings",
+      "description": "Link Shopify products with existing Amazon listings without hassle.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Currency Control",
+      "description": "Manage your currency if selling in different regions",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/currency.png"
+    },
+    {
+      "feature": "Unlimited Listings",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "Refund Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Cancelled Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Dedicated Account Manager",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/email&chat.png"
+    }
+  ],
+  "badge": "",
+  "trial_days_limit": "",
+  "trial_credit_limit": "",
+  "services_groups": [
+    {
+      "title": "Order Management",
+      "description": "Order Management",
+      "services": [
+        {
+          "title": "Order Sync",
+          "code": "upto_15000_orders",
+          "type": "order_sync",
+          "required": 1,
+          "service_charge": "0",
+          "expiring_at": "",
+          "discounts": [],
+          "sort_order": 1,
+          "trial_days_limit": "",
+          "trial_credit_limit": "",
+          "prepaid": {
+            "service_credits": 15000,
+            "validity_changes": "Add",
+            "fixed_price": 0,
+            "reset_credit_after": 0,
+            "expiring_at": "0"
+          },
+          "postpaid": {
+            "per_unit_usage_price": "3",
+            "unit_qty": 10,
+            "capped_credit": 15000,
+            "validity_changes": "Replace"
+          }
+        }
+      ]
+    }
+  ],
+  "plan_id": "8",
+  "category": "regular"
+},
+{
+  
+  "code": "premium",
+  "title": "Premium",
+  "description": "Up to 15000 Orders",
+  "validity": 365,
+  "type": "plan",
+  "billed_type": "yearly",
+  "custom_price": 8268,
+  "scope": "global",
+  "sort_order": 8,
+  "marketplace": "amazon",
+  "source_marketplace": "shopify",
+  "target_marketplace": "amazon",
+  "discounts": [
+    {
+      "name": "Yearly Offer",
+      "type": "fixed",
+      "value": "689"
+    }
+  ],
+  "features": [
+    {
+      "feature": "Manage 2x order credits",
+      "description": "Continue receiving new orders after exhausting credits. $3 charge for every 10 orders synced beyond plan limit.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Unlimited Bulk Upload",
+      "description": "In the free plan, you can only upload up to 50 products at a time; however, in this plan, you can upload as many products as you need.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "24/7 Email & Chat Support",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/email&chat.png"
+    },
+    {
+      "feature": "Connect multiple Amazon accounts globally",
+      "description": "Connect multiple Global Amazon accounts excluding Egypt, Saudi Arabia and Turkey.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/multipleAcc.png"
+    },
+    {
+      "feature": "Inventory Control",
+      "description": "Control or customize your inventory as per your need.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/inventory.png"
+    },
+    {
+      "feature": "Link Existing Listings",
+      "description": "Link Shopify products with existing Amazon listings without hassle.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Currency Control",
+      "description": "Manage your currency if selling in different regions",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/currency.png"
+    },
+    {
+      "feature": "Unlimited Listings",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "Refund Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Cancelled Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Dedicated Account Manager",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/email&chat.png"
+    }
+  ],
+  "badge": "",
+  "trial_days_limit": "",
+  "trial_credit_limit": "",
+  "services_groups": [
+    {
+      "title": "Order Management",
+      "description": "Order Management",
+      "services": [
+        {
+          "title": "Order Sync",
+          "code": "upto_15000_orders",
+          "type": "order_sync",
+          "required": 1,
+          "service_charge": "0",
+          "expiring_at": "",
+          "discounts": [],
+          "sort_order": 1,
+          "trial_days_limit": "",
+          "trial_credit_limit": "",
+          "prepaid": {
+            "service_credits": 15000,
+            "validity_changes": "Add",
+            "fixed_price": 0,
+            "reset_credit_after": 0,
+            "expiring_at": "0"
+          },
+          "postpaid": {
+            "per_unit_usage_price": "3",
+            "unit_qty": 10,
+            "capped_credit": 15000,
+            "validity_changes": "Replace"
+          }
+        }
+      ]
+    }
+  ],
+  "plan_id": "16",
+  "category": "regular"
+},
+{
+ 
+  "code": "enterprise",
+  "title": "Enterprise",
+  "description": "Up to 1000000 Orders",
+  "validity": 30,
+  "type": "plan",
+  "billed_type": "monthly",
+  "custom_price": 989,
+  "scope": "global",
+  "sort_order": 9,
+  "marketplace": "amazon",
+  "source_marketplace": "shopify",
+  "target_marketplace": "amazon",
+  "discounts": [],
+  "features": [
+    {
+      "feature": "Manage 2x order credits",
+      "description": "Continue receiving new orders after exhausting credits. $3 charge for every 10 orders synced beyond plan limit.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Unlimited Bulk Upload",
+      "description": "In the free plan, you can only upload up to 50 products at a time; however, in this plan, you can upload as many products as you need.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "24/7 Email & Chat Support",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/email&chat.png"
+    },
+    {
+      "feature": "Connect multiple Amazon accounts globally",
+      "description": "Connect multiple Global Amazon accounts excluding Egypt, Saudi Arabia and Turkey.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/multipleAcc.png"
+    },
+    {
+      "feature": "Inventory Control",
+      "description": "Control or customize your inventory as per your need.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/inventory.png"
+    },
+    {
+      "feature": "Link Existing Listings",
+      "description": "Link Shopify products with existing Amazon listings without hassle.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Currency Control",
+      "description": "Manage your currency if selling in different regions",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/currency.png"
+    },
+    {
+      "feature": "Unlimited Listings",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "Refund Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Cancelled Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Dedicated Account Manager",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/email&chat.png"
+    }
+  ],
+  "badge": "",
+  "trial_days_limit": "",
+  "trial_credit_limit": "",
+  "services_groups": [
+    {
+      "title": "Order Management",
+      "description": "Order Management",
+      "services": [
+        {
+          "title": "Order Sync",
+          "code": "upto_1000000_orders",
+          "type": "order_sync",
+          "required": 1,
+          "service_charge": "0",
+          "expiring_at": "",
+          "discounts": [],
+          "sort_order": 1,
+          "trial_days_limit": "",
+          "trial_credit_limit": "",
+          "prepaid": {
+            "service_credits": 1000000,
+            "validity_changes": "Add",
+            "fixed_price": 0,
+            "reset_credit_after": 0,
+            "expiring_at": "0"
+          },
+          "postpaid": {
+            "per_unit_usage_price": "3",
+            "unit_qty": 10,
+            "capped_credit": 1000000,
+            "validity_changes": "Replace"
+          }
+        }
+      ]
+    }
+  ],
+  "plan_id": "17",
+  "category": "regular"
+},
+{
+  
+  "code": "enterprise",
+  "title": "Enterprise",
+  "description": "Up to 1000000 Orders",
+  "validity": 365,
+  "type": "plan",
+  "billed_type": "yearly",
+  "custom_price": 11868,
+  "scope": "global",
+  "sort_order": 9,
+  "marketplace": "amazon",
+  "source_marketplace": "shopify",
+  "target_marketplace": "amazon",
+  "discounts": [
+    {
+      "name": "Yearly Offer",
+      "type": "fixed",
+      "value": "989"
+    }
+  ],
+  "features": [
+    {
+      "feature": "Manage 2x order credits",
+      "description": "Continue receiving new orders after exhausting credits. $3 charge for every 10 orders synced beyond plan limit.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Unlimited Bulk Upload",
+      "description": "In the free plan, you can only upload up to 50 products at a time; however, in this plan, you can upload as many products as you need.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "24/7 Email & Chat Support",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/email&chat.png"
+    },
+    {
+      "feature": "Connect multiple Amazon accounts globally",
+      "description": "Connect multiple Global Amazon accounts excluding Egypt, Saudi Arabia and Turkey.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/multipleAcc.png"
+    },
+    {
+      "feature": "Inventory Control",
+      "description": "Control or customize your inventory as per your need.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/inventory.png"
+    },
+    {
+      "feature": "Link Existing Listings",
+      "description": "Link Shopify products with existing Amazon listings without hassle.",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Currency Control",
+      "description": "Manage your currency if selling in different regions",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/currency.png"
+    },
+    {
+      "feature": "Unlimited Listings",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/unlimitedListing.png"
+    },
+    {
+      "feature": "Refund Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Cancelled Order Syncing",
+      "description": "Sync refund orders from Shopify to Amazon",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/setting.png"
+    },
+    {
+      "feature": "Dedicated Account Manager",
+      "description": "",
+      "image": "https://amazon-mail-images.s3.ap-northeast-3.amazonaws.com/Images/email&chat.png"
+    }
+  ],
+  "badge": "",
+  "trial_days_limit": "",
+  "trial_credit_limit": "",
+  "services_groups": [
+    {
+      "title": "Order Management",
+      "description": "Order Management",
+      "services": [
+        {
+          "title": "Order Sync",
+          "code": "upto_1000000_orders",
+          "type": "order_sync",
+          "required": 1,
+          "service_charge": "0",
+          "expiring_at": "",
+          "discounts": [],
+          "sort_order": 1,
+          "trial_days_limit": "",
+          "trial_credit_limit": "",
+          "prepaid": {
+            "service_credits": 1000000,
+            "validity_changes": "Add",
+            "fixed_price": 0,
+            "reset_credit_after": 0,
+            "expiring_at": "0"
+          },
+          "postpaid": {
+            "per_unit_usage_price": "3",
+            "unit_qty": 10,
+            "capped_credit": 1000000,
+            "validity_changes": "Replace"
+          }
+        }
+      ]
+    }
+  ],
+  "plan_id": "18",
+  "category": "regular"
+},
+{
+  
+  "code": "initial",
+  "title": "Initial",
+  "description": "Up to 1000 Orders",
+  "validity": 30,
+  "type": "plan",
+  "billed_type": "monthly",
+  "custom_price": 81,
+  "scope": "global",
+  "sort_order": 1,
+  "marketplace": "amazon",
+  "source_marketplace": "shopify",
+  "target_marketplace": "amazon",
+  "discounts": [],
+  "features": [
+    {
+      "feature": "<b>15 SKU listing optimization</b>",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "<b>Account Audit</b>",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "<b>Unlimited Listings</b>",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "Dedicated Account Manager",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "24/7 Email & Chat Support",
+      "description": "",
+      "image": ""
+    }
+  ],
+  "services_groups": [
+    {
+      "title": "Order Management",
+      "description": "Order Management",
+      "services": [
+        {
+          "title": "Order Sync",
+          "code": "upto_1000_orders",
+          "type": "order_sync",
+          "required": 1,
+          "service_charge": "0",
+          "expiring_at": "",
+          "discounts": [],
+          "sort_order": 1,
+          "trial_days_limit": "",
+          "trial_credit_limit": "",
+          "prepaid": {
+            "service_credits": 1000,
+            "validity_changes": "Add",
+            "fixed_price": 0,
+            "reset_credit_after": 0,
+            "expiring_at": "0"
+          },
+          "postpaid": {
+            "per_unit_usage_price": "3",
+            "unit_qty": 10,
+            "capped_credit": 1000,
+            "validity_changes": "Replace"
+          }
+        }
+      ]
+    }
+  ],
+  "category": "marketing",
+  "plan_id": "19"
+},
+{
+
+  "code": "beginner_pro",
+  "title": "Beginner Pro",
+  "description": "Up to 2000 Orders",
+  "validity": 30,
+  "type": "plan",
+  "billed_type": "monthly",
+  "custom_price": 133,
+  "scope": "global",
+  "sort_order": 2,
+  "marketplace": "amazon",
+  "source_marketplace": "shopify",
+  "target_marketplace": "amazon",
+  "discounts": [],
+  "features": [
+    {
+      "feature": "<b>30 SKU listing optimization</b>",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "<b>GTIN Exemption/Brand Registry Assistance</b>",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "<b>Store design for 1 product category</b>",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "Account Audit",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "Unlimited Listings",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "Dedicated Account Manager",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "24/7 Email & Chat Support",
+      "description": "",
+      "image": ""
+    }
+  ],
+  "services_groups": [
+    {
+      "title": "Order Management",
+      "description": "Order Management",
+      "services": [
+        {
+          "title": "Order Sync",
+          "code": "upto_2000_orders",
+          "type": "order_sync",
+          "required": 1,
+          "service_charge": "0",
+          "expiring_at": "",
+          "discounts": [],
+          "sort_order": 1,
+          "trial_days_limit": "",
+          "trial_credit_limit": "",
+          "prepaid": {
+            "service_credits": 2000,
+            "validity_changes": "Add",
+            "fixed_price": 0,
+            "reset_credit_after": 0,
+            "expiring_at": "0"
+          },
+          "postpaid": {
+            "per_unit_usage_price": "3",
+            "unit_qty": 10,
+            "capped_credit": 2000,
+            "validity_changes": "Replace"
+          }
+        }
+      ]
+    }
+  ],
+  "category": "marketing",
+  "plan_id": "20"
+},
+{
+
+  "code": "startup_pro",
+  "title": "Startup Pro",
+  "description": "Up to 2500 Orders",
+  "validity": 30,
+  "type": "plan",
+  "billed_type": "monthly",
+  "custom_price": 225,
+  "scope": "global",
+  "sort_order": 3,
+  "marketplace": "amazon",
+  "source_marketplace": "shopify",
+  "target_marketplace": "amazon",
+  "discounts": [],
+  "features": [
+    {
+      "feature": "<b>Ads on top 10 SKU for a Month+ upto complimentary 40 skus optimisation )</b>",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "<b>Business Strategy Guidance</b>",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "<b>Top 2 competitors report</b>",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "<b>GTIN Exemption/Brand Registry Assistance</b>",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "Account Audit",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "Unlimited Listings",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "Dedicated Account Manager",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "24/7 Email & Chat Support",
+      "description": "",
+      "image": ""
+    }
+  ],
+  "services_groups": [
+    {
+      "title": "Order Management",
+      "description": "Order Management",
+      "services": [
+        {
+          "title": "Order Sync",
+          "code": "upto_2500_orders",
+          "type": "order_sync",
+          "required": 1,
+          "service_charge": "0",
+          "expiring_at": "",
+          "discounts": [],
+          "sort_order": 1,
+          "trial_days_limit": "",
+          "trial_credit_limit": "",
+          "prepaid": {
+            "service_credits": 2500,
+            "validity_changes": "Add",
+            "fixed_price": 0,
+            "reset_credit_after": 0,
+            "expiring_at": "0"
+          },
+          "postpaid": {
+            "per_unit_usage_price": "3",
+            "unit_qty": 10,
+            "capped_credit": 2500,
+            "validity_changes": "Replace"
+          }
+        }
+      ]
+    }
+  ],
+  "category": "marketing",
+  "plan_id": "21"
+},
+{
+ 
+  "code": "scale_pro",
+  "title": "Scale Pro",
+  "description": "Up to 3000 Orders",
+  "validity": 30,
+  "type": "plan",
+  "billed_type": "monthly",
+  "custom_price": 599,
+  "scope": "global",
+  "sort_order": 4,
+  "marketplace": "amazon",
+  "source_marketplace": "shopify",
+  "target_marketplace": "amazon",
+  "discounts": [],
+  "features": [
+    {
+      "feature": "<b>Ads on top 20 SKU for a Month + upto 100 skus optimisation(complimentary)</b>",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "<b>Image Designing</b>",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "<b>A+ content for 1 product category</b>",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "Store design for 1 product category",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "Business Strategy Guidance",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "Top 2 competitors report",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "GTIN Exemption/Brand Registry Assistance",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "Account Audit",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "Unlimited Listings",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "Dedicated Account Manager",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "24/7 Email & Chat Support",
+      "description": "",
+      "image": ""
+    }
+  ],
+  "services_groups": [
+    {
+      "title": "Order Management",
+      "description": "Order Management",
+      "services": [
+        {
+          "title": "Order Sync",
+          "code": "upto_3000_orders",
+          "type": "order_sync",
+          "required": 1,
+          "service_charge": "0",
+          "expiring_at": "",
+          "discounts": [],
+          "sort_order": 1,
+          "trial_days_limit": "",
+          "trial_credit_limit": "",
+          "prepaid": {
+            "service_credits": 3000,
+            "validity_changes": "Add",
+            "fixed_price": 0,
+            "reset_credit_after": 0,
+            "expiring_at": "0"
+          },
+          "postpaid": {
+            "per_unit_usage_price": "3",
+            "unit_qty": 10,
+            "capped_credit": 3000,
+            "validity_changes": "Replace"
+          }
+        }
+      ]
+    }
+  ],
+  "category": "marketing",
+  "plan_id": "22"
+},
+{
+  
+  "code": "growth",
+  "title": "Growth",
+  "description": "Up to 4000 Orders",
+  "validity": 365,
+  "type": "plan",
+  "billed_type": "yearly",
+  "custom_price": 3449,
+  "scope": "global",
+  "sort_order": 1,
+  "marketplace": "amazon",
+  "source_marketplace": "shopify",
+  "target_marketplace": "amazon",
+  "discounts": [
+    {
+      "name": "Yearly Offer",
+      "type": "fixed",
+      "value": "287"
+    }
+  ],
+  "features": [
+    {
+      "feature": "<b>Ads on top performing 100 SKU +  upto 500 skus optimisation (Complimentary)</b>",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "<b>Complete Account Management<b>",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "<b>Image Designing</b>",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "<b>A+ content for 1 product category</b>",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "Store design for 1 product category",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "Business Strategy Guidance",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "Top 2 competitors report",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "GTIN Exemption/Brand Registry Assistance",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "Account Audit",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "Unlimited Listings",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "Dedicated Account Manager",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "24/7 Email & Chat Support",
+      "description": "",
+      "image": ""
+    }
+  ],
+  "services_groups": [
+    {
+      "title": "Order Management",
+      "description": "Order Management",
+      "services": [
+        {
+          "title": "Order Sync",
+          "code": "upto_1000_orders",
+          "type": "order_sync",
+          "required": 1,
+          "service_charge": "0",
+          "expiring_at": "",
+          "discounts": [],
+          "sort_order": 1,
+          "trial_days_limit": "",
+          "trial_credit_limit": "",
+          "prepaid": {
+            "service_credits": 4000,
+            "validity_changes": "Add",
+            "fixed_price": 0,
+            "reset_credit_after": 0,
+            "expiring_at": "0"
+          },
+          "postpaid": {
+            "per_unit_usage_price": "3",
+            "unit_qty": 10,
+            "capped_credit": 4000,
+            "validity_changes": "Replace"
+          }
+        }
+      ]
+    }
+  ],
+  "category": "marketing",
+  "plan_id": "23"
+},
+{
+ 
+  "code": "professional",
+  "title": "Professional",
+  "description": "Up to 5000 Orders",
+  "validity": 365,
+  "type": "plan",
+  "billed_type": "yearly",
+  "custom_price": 4999,
+  "scope": "global",
+  "sort_order": 2,
+  "marketplace": "amazon",
+  "source_marketplace": "shopify",
+  "target_marketplace": "amazon",
+  "discounts": [
+    {
+      "name": "Yearly Offer",
+      "type": "fixed",
+      "value": "416"
+    }
+  ],
+  "features": [
+    {
+      "feature": "<b>Ads on all top performing SKU +   upto 1000 skus optimisation (Complimentary)</b>",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "<b>Complete Account Management<b>",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "<b>Image Designing</b>",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "<b>A+ content for 1 product category</b>",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "Store design for 1 product category",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "Business Strategy Guidance",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "Top 2 competitors report",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "GTIN Exemption/Brand Registry Assistance",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "Account Audit",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "Unlimited Listings",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "Dedicated Account Manager",
+      "description": "",
+      "image": ""
+    },
+    {
+      "feature": "24/7 Email & Chat Support",
+      "description": "",
+      "image": ""
+    }
+  ],
+  "services_groups": [
+    {
+      "title": "Order Management",
+      "description": "Order Management",
+      "services": [
+        {
+          "title": "Order Sync",
+          "code": "upto_5000_orders",
+          "type": "order_sync",
+          "required": 1,
+          "service_charge": "0",
+          "expiring_at": "",
+          "discounts": [],
+          "sort_order": 1,
+          "trial_days_limit": "",
+          "trial_credit_limit": "",
+          "prepaid": {
+            "service_credits": 5000,
+            "validity_changes": "Add",
+            "fixed_price": 0,
+            "reset_credit_after": 0,
+            "expiring_at": "0"
+          },
+          "postpaid": {
+            "per_unit_usage_price": "3",
+            "unit_qty": 10,
+            "capped_credit": 5000,
+            "validity_changes": "Replace"
+          }
+        }
+      ]
+    }
+  ],
+  "category": "marketing",
+  "plan_id": "24"
+}]

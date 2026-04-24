@@ -1,0 +1,38 @@
+<h3 class='text-center mt-5 mb-2 text-white'>Create App Destination Form</h3>
+<div class='d-flex justify-content-center align-items-center'>
+    <form class="rounded w-50 p-2 shadow" action="" method="POST" style="background-color:#495C83">
+
+        <div class="form-group pr-3 pl-3 pt-2">
+            <label for="" class="text-light">Title</label>
+            <input type="text" class="form-control" id="" placeholder="Title" name="title" required>
+        </div>
+
+
+        <div class="form-group pr-3 pl-3 pt-2">
+            <label for="" class="text-light">Type</label>
+            <input type="text" class="form-control" id="" placeholder="ex: app" name="type" required>
+        </div>
+
+        <div class="form-group pr-3 pl-3 pt-2">
+            <label for="" class="text-light">Event Handler</label>
+            <select class="form-control" id="event_handler" name="event_handler" onclick="showCard()">
+                <option value="sqs">SQS</option>
+                <option value="event_bridge">Event Bridge</option>
+                <option value="api_endpoint">API Endpoint</option>
+            </select>
+        </div>
+
+        <!-- SQS Card -->
+
+        <div id="card" class="form-group pr-3 pl-3 pt-2 pb-2">
+
+        </div>
+
+        <div class="form-group pr-3 pl-3 pt-2 pb-2">
+            <button type="submit" class="btn btn-success rounded">Create Destination</button>
+        </div>
+
+    </form>
+</div>
+
+<p class='text-center text-warning'><?php echo isset($message) ? $message : '' ?></p>

@@ -1,0 +1,12 @@
+{ 
+	"name": "cedcommerce/phalcon-module-shopifyhome", 
+	"description": "Phalcon Shopify Home Module", 
+	"require": { 
+		"php": ">=5.6"
+	},
+	"extra": {
+		"module": "shopifyhome"
+	},
+	"type": "ced-phalcon", 
+	"license": [ "EULA" ] 
+}

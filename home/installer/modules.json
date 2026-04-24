@@ -1,0 +1,12 @@
+[
+{
+	"name":"phalcon-installer",
+	"title":"Module Installer",
+	"selected":false
+},
+{
+	"name":"phalcon-module-core",
+	"title":"Core",
+	"selected":false
+}
+]

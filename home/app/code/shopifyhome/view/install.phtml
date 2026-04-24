@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Cedcommerce Shopify Account Connect</title>
+      <style>
+         @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+         * {
+         box-sizing: border-box;
+         font-family: "Montserrat", sans-serif;
+         }
+         body {
+         margin: 0;
+         padding: 0;
+         font-family: "Montserrat", sans-serif;
+         background-color: #eee;
+         }
+         :root {
+         --action-color: #413bbc;
+         --action-loading: #6066bc;
+         --badge-error: #f7977f;
+         --badge-success: #d9fadd;
+         --badge-partial-error: #fcd4c9;
+         --border-color: #d4d4d4;
+         --card-shadow-color: #cccccc;
+         --color-green: #53bf62;
+         --dark-med-color: #3f3f3f;
+         --dark-color: #2a2a2a;
+         --form-element-bgcolor: #fafafa;
+         --form-element-color: #565656;
+         --grey-color: #cecece;
+         --grey-color-2: #b4b4b4;
+         --greydark-color: #8f8f8f;
+         --link-color: #413bbc;
+         --link-color-light: #8c89d6;
+         --link-color-dark: #707070;
+         --secondary-link-light: #f0effb;
+         --main-bg-color: #f5f4fd;
+         --white-color: #ffffff;
+         --xtra-dark-color: #0a0a0a;
+         --btn-grey: #fcfbfe;
+         --color-Selago: #f7f6fd;
+         --color-Bridesmaid: #feeaeb;
+         --color-feta: #d8fbdd;
+         --color-linkwater: #e4e3f8;
+         --color-warning: #f9f5dc;
+         --color-pageBorder: #eaeaea;
+         }
+         .inte-formElement {
+         border: 1px solid var(--link-color-dark);
+         border-radius: 15px;
+         padding: 15px 15px;
+         width: 100%;
+         position: relative;
+         font-size: 18px;
+         font-weight: 600;
+         font-family: "Montserrat", sans-serif;
+         color: var(--form-element-color);
+         cursor: pointer;
+         outline: unset;
+         }
+         .inte-btn {
+         border: 0;
+         padding: 15px;
+         border-radius: 15px;
+         background-color: var(--white-color);
+         cursor: pointer;
+         position: relative;
+         transition: 300ms all linear;
+         outline: 0;
+         }
+         .inte-btnExtraNarrow {
+         padding: 8px 10px;
+         border-radius: 7px;
+         cursor: pointer;
+         }
+         .inte-btn--Primary {
+         background-color: var(--action-color);
+         color: white;
+         }
+         .inte-formElementTextfield {
+            cursor: auto;
+            background-color: var(--white-color);
+         }
+         .inte--Textfield__thin {
+            padding: 9px 10px 9px 10px;
+            font-size: 14px;
+            border-radius: 7px;
+         }
+      </style>
+   </head>
+   <body>
+      <div
+         style="
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         text-align: center;
+         height: 500px;
+         "
+         >
+         <div>
+            <div>
+               <h1>Select Country</h1>
+            </div>
+            <br />
+            <form class="inte-formElement" action="<?php echo $url . '?' . http_build_query($query_params) ?>">
+               <input 
+               type="text" 
+               name="shop"
+               placeholder="E.g :test.myshopify.com" 
+               class=" inte-formElement inte-formElementTextfield" 
+               value=""
+               >
+               <input type="hidden" name="sAppId" value="<?php echo $query_params['sAppId'] ?>">
+               <input type="hidden" name="state" value="<?php echo $query_params['state'] ?>">
+               <br />
+               <br />
+               <input class="inte-btn inte-btn--Primary" type="submit" value="Submit">
+            </form>
+         </div>
+      </div>
+   </body>
+</html>

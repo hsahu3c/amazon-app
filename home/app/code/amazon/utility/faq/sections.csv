@@ -1,0 +1,6 @@
+code,name,is_deletable
+general_queries,"General Queries",no
+product_section,"Product Section",no
+shipment_setting,"Shipment setting",no
+order_section,"Order Section",no
+errors,Errors,no

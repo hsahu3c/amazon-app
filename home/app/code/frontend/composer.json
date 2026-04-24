@@ -1,0 +1,13 @@
+{ 
+	"name": "cedcommerce/phalcon-module-frontend", 
+	"description": "Phalcon Frontend Module", 
+	"require": { 
+		"php": ">=5.6" 
+	},
+	"extra": {
+		"module": "frontend"
+	},
+	"type": "ced-phalcon", 
+	"version": "0.0.2", 
+	"license": [ "EULA" ] 
+}

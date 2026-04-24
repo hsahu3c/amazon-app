@@ -1,0 +1,25 @@
+<?php
+return [
+		'databases' => [
+			'db'=>[
+		        'adapter'  => 'Mongo',
+		        'host'     => '{{dbhost}}',
+		        'username' => '{{dbuser}}',
+		        'password' => '{{dbpassword}}',
+		        'dbname'   => '{{dbname}}'
+		    ],
+		   
+	    ],
+	    'app_code' => '{{appname}}',
+	    'frontend_app_url' => 'http://192.168.0.48:4200',
+	    'redirect_after_install' => '/panel/apps/availableapps',
+	    'server_ip' => '192.168.0.222',
+	    'current_db' => 'db',
+	    'default_db' => 'db',
+	    'backend_base_url' => 'http://192.168.0.222/phalcon/importer/public/',
+	    'rabbitmq_url' => 'rabbitmq-url',
+	    'mail_through_rabbitmq' => false,
+	    'enable_rabbitmq' => false,
+	    'enable_rabbitmq_internal'=>false,
+	    'app_token' => 'app-token'
+	];

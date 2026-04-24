@@ -1,0 +1,8 @@
+{
+    "shopify": {
+      "inventory": "NoInventory",
+      "other": "GeneralAdjustment",
+      "fraud": "RiskAssessmentInformationNotValid",
+      "declined": "MerchandiseNotReceived"
+    }
+  }

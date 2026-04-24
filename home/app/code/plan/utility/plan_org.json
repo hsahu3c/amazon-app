@@ -1,0 +1,392 @@
+[
+{
+    "title": "Free",
+    "description": "Up to 50 Orders",
+    "validity": "30",
+    "custom_price": 0,
+    "scope": "global",
+    "sort_order": 1,
+    "marketplace": "amazon",
+    "source_marketplace":"shopify",
+    "target_marketplace":"amazon",
+    "discounts": [],
+    "badge": "",
+    "trial_days_limit":"",
+    "trial_credit_limit":"",
+    "services_groups": [
+        {
+            "title": "Order Management",
+            "description": "Order Management",
+            "services": [
+                {
+                    "title": "Order Sync",
+                    "code": "upto_50_orders",
+                    "type": "order_sync",
+                    "required": 1,
+                    "service_charge": "0",
+                    "expiring_at": "",
+                    "discounts": [],
+                    "sort_order": 1,
+                    "trial_days_limit":"",
+                    "trial_credit_limit":"",
+                    "prepaid": {
+                        "service_credits": "50",
+                        "validity_changes": "Add",
+                        "fixed_price": 0,
+                        "reset_credit_after": 0,
+                        "expiring_at": "0"
+                    },
+                    "postpaid": {
+                        "per_unit_usage_price": "3",
+                        "unit_qty": 10,
+                        "capped_credit": "0",
+                        "validity_changes": "Replace"
+                    }
+                }
+            ]
+        }
+    ],
+    "plan_id": "1"
+},
+{
+    "title": "Beginner",
+    "description": "Up to 100 Orders",
+    "validity": "30",
+    "custom_price": 15,
+    "scope": "global",
+    "sort_order": 2,
+    "marketplace": "amazon",
+    "source_marketplace":"shopify",
+    "target_marketplace":"amazon",
+    "discounts": [],
+    "badge": "",
+    "services_groups": [
+        {
+            "title": "Order Management",
+            "description": "Order Management",
+            "services": [
+                {
+                    "title": "Order Sync",
+                    "code": "upto_100_orders",
+                    "type": "order_sync",
+                    "required": 1,
+                    "service_charge": "0",
+                    "expiring_at": "",
+                    "discounts": [],
+                    "sort_order": 1,
+                    "trial_days_limit":"",
+                    "trial_credit_limit":"",
+                    "prepaid": {
+                        "service_credits": "100",
+                        "validity_changes": "Add",
+                        "fixed_price": 0,
+                        "reset_credit_after": 0,
+                        "expiring_at": "0"
+                    },
+                    "postpaid": {
+                        "per_unit_usage_price": "3",
+                        "unit_qty": 10,
+                        "capped_credit": "100",
+                        "validity_changes": "Replace"
+                    }
+                }
+            ]
+        }
+    ],
+    "plan_id": "2"
+},
+{
+    "title": "Startup",
+    "description": "Up to 500 Orders",
+    "validity": "30",
+    "custom_price": 49,
+    "scope": "global",
+    "sort_order": 3,
+    "marketplace": "amazon",
+    "source_marketplace":"shopify",
+    "target_marketplace":"amazon",
+    "discounts": [],
+    "badge": "Popular",
+    "trial_days_limit":"",
+    "trial_credit_limit":"",
+    "services_groups": [
+        {
+            "title": "Order Management",
+            "description": "Order Management",
+            "services": [
+                {
+                    "title": "Order Sync",
+                    "code": "upto_500_orders",
+                    "type": "order_sync",
+                    "required": 1,
+                    "service_charge": "0",
+                    "expiring_at": "",
+                    "discounts": [],
+                    "sort_order": 1,
+                    "trial_days_limit":"",
+                    "trial_credit_limit":"",
+                    "prepaid": {
+                        "service_credits": "500",
+                        "validity_changes": "Add",
+                        "fixed_price": 0,
+                        "reset_credit_after": 0,
+                        "expiring_at": "0"
+                    },
+                    "postpaid": {
+                        "per_unit_usage_price": "3",
+                        "unit_qty": 10,
+                        "capped_credit": "500",
+                        "validity_changes": "Replace"
+                    }
+                }
+            ]
+        }
+    ],
+    "plan_id": "3"
+},
+{
+    "title": "Scale",
+    "description": "Up to 1000 Orders",
+    "validity": "30",
+    "custom_price": 89,
+    "scope": "global",
+    "sort_order": 4,
+    "marketplace": "amazon",
+    "source_marketplace":"shopify",
+    "target_marketplace":"amazon",
+    "discounts": [],
+    "badge": "",
+    "trial_days_limit":"",
+    "trial_credit_limit":"",
+    "services_groups": [
+        {
+            "title": "Order Management",
+            "description": "Order Management",
+            "services": [
+                {
+                    "title": "Order Sync",
+                    "code": "upto_1000_orders",
+                    "type": "order_sync",
+                    "required": 1,
+                    "service_charge": "0",
+                    "expiring_at": "",
+                    "discounts": [],
+                    "sort_order": 1,
+                    "trial_days_limit":"",
+                    "trial_credit_limit":"",
+                    "prepaid": {
+                        "service_credits": "1000",
+                        "validity_changes": "Add",
+                        "fixed_price": 0,
+                        "reset_credit_after": 0,
+                        "expiring_at": "0"
+                    },
+                    "postpaid": {
+                        "per_unit_usage_price": "3",
+                        "unit_qty": 10,
+                        "capped_credit": "1000",
+                        "validity_changes": "Replace"
+                    }
+                }
+            ]
+        }
+    ],
+    "plan_id": "4"
+},
+{
+    "title": "Growth",
+    "description": "Up to 2500 Orders",
+    "validity": "30",
+    "custom_price": 159,
+    "scope": "global",
+    "sort_order": 5,
+    "marketplace": "amazon",
+    "source_marketplace":"shopify",
+    "target_marketplace":"amazon",
+    "discounts": [],
+    "badge": "",
+    "trial_days_limit":"",
+    "trial_credit_limit":"",
+    "services_groups": [
+        {
+            "title": "Order Management",
+            "description": "Order Management",
+            "services": [
+                {
+                    "title": "Order Sync",
+                    "code": "upto_2500_orders",
+                    "type": "order_sync",
+                    "required": 1,
+                    "service_charge": "0",
+                    "expiring_at": "",
+                    "discounts": [],
+                    "sort_order": 1,
+                    "trial_days_limit":"",
+                    "trial_credit_limit":"",
+                    "prepaid": {
+                        "service_credits": "2500",
+                        "validity_changes": "Add",
+                        "fixed_price": 0,
+                        "reset_credit_after": 0,
+                        "expiring_at": "0"
+                    },
+                    "postpaid": {
+                        "per_unit_usage_price": "3",
+                        "unit_qty": 10,
+                        "capped_credit": "2500",
+                        "validity_changes": "Replace"
+                    }
+                }
+            ]
+        }
+    ],
+    "plan_id": "5"
+},
+{
+    "title": "Advanced",
+    "description": "Up to 5000 Orders",
+    "validity": "30",
+    "custom_price": 259,
+    "scope": "global",
+    "sort_order": 6,
+    "marketplace": "amazon",
+    "source_marketplace":"shopify",
+    "target_marketplace":"amazon",
+    "discounts": [],
+    "badge": "",
+    "trial_days_limit":"",
+    "trial_credit_limit":"",
+    "services_groups": [
+        {
+            "title": "Order Management",
+            "description": "Order Management",
+            "services": [
+                {
+                    "title": "Order Sync",
+                    "code": "upto_5000_orders",
+                    "type": "order_sync",
+                    "required": 1,
+                    "service_charge": "0",
+                    "expiring_at": "",
+                    "discounts": [],
+                    "sort_order": 1,
+                    "trial_days_limit":"",
+                    "trial_credit_limit":"",
+                    "prepaid": {
+                        "service_credits": "5000",
+                        "validity_changes": "Add",
+                        "fixed_price": 0,
+                        "reset_credit_after": 0,
+                        "expiring_at": "0"
+                    },
+                    "postpaid": {
+                        "per_unit_usage_price": "3",
+                        "unit_qty": 10,
+                        "capped_credit": "5000",
+                        "validity_changes": "Replace"
+                    }
+                }
+            ]
+        }
+    ],
+    "plan_id": "6"
+},
+{
+    "title": "Professional",
+    "description": "Up to 10000 Orders",
+    "validity": "30",
+    "custom_price": 459,
+    "scope": "global",
+    "sort_order": 7,
+    "marketplace": "amazon",
+    "source_marketplace":"shopify",
+    "target_marketplace":"amazon",
+    "discounts": [],
+    "badge": "",
+    "trial_days_limit":"",
+    "trial_credit_limit":"",
+    "services_groups": [
+        {
+            "title": "Order Management",
+            "description": "Order Management",
+            "services": [
+                {
+                    "title": "Order Sync",
+                    "code": "upto_10000_orders",
+                    "type": "order_sync",
+                    "required": 1,
+                    "service_charge": "0",
+                    "expiring_at": "",
+                    "discounts": [],
+                    "sort_order": 1,
+                    "trial_days_limit":"",
+                    "trial_credit_limit":"",
+                    "prepaid": {
+                        "service_credits": "10000",
+                        "validity_changes": "Add",
+                        "fixed_price": 0,
+                        "reset_credit_after": 0,
+                        "expiring_at": "0"
+                    },
+                    "postpaid": {
+                        "per_unit_usage_price": "3",
+                        "unit_qty": 10,
+                        "capped_credit": "10000",
+                        "validity_changes": "Replace"
+                    }
+                }
+            ]
+        }
+    ],
+    "plan_id": "7"
+},
+{
+    "title": "Enterprise",
+    "description": "Up to 1000000 Orders",
+    "validity": "30",
+    "custom_price": 666,
+    "scope": "global",
+    "sort_order": 8,
+    "marketplace": "amazon",
+    "source_marketplace":"shopify",
+    "target_marketplace":"amazon",
+    "discounts": [],
+    "badge": "",
+    "trial_days_limit":"",
+    "trial_credit_limit":"",
+    "services_groups": [
+        {
+            "title": "Order Management",
+            "description": "Order Management",
+            "services": [
+                {
+                    "title": "Order Sync",
+                    "code": "upto_1000000_orders",
+                    "type": "order_sync",
+                    "required": 1,
+                    "service_charge": "0",
+                    "expiring_at": "",
+                    "discounts": [],
+                    "sort_order": 1,
+                    "trial_days_limit":"",
+                    "trial_credit_limit":"",
+                    "prepaid": {
+                        "service_credits": "100000",
+                        "validity_changes": "Add",
+                        "fixed_price": 0,
+                        "reset_credit_after": 0,
+                        "expiring_at": "0"
+                    },
+                    "postpaid": {
+                        "per_unit_usage_price": "3",
+                        "unit_qty": 10,
+                        "capped_credit": "100000",
+                        "validity_changes": "Replace"
+                    }
+                }
+            ]
+        }
+    ],
+    "plan_id": "8"
+}
+]

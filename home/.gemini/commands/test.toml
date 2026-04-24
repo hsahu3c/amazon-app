@@ -1,0 +1,26 @@
+description = "Stages all files, commits with a beautiful AI-generated message, and pushes to the github."
+prompt = """
+Based on the following git diff, please generate a beautiful and concise
+commit message. The message should follow the conventional commit format,
+start with a single appropriate emoji, and be fewer than 80 characters.
+Examples:
+- ":sparkles: feat: implement user authentication"
+- ":bug: fix: resolve issue with null pointer in user service"
+- ":books: docs: update README with new setup instructions"
+- ":art: style: refactor CSS for better readability"
+- ":rocket: perf: optimize database queries for speed"
+- ":white_check_mark: test: add unit tests for the payment gateway"
+- ":recycle: refactor: simplify the data processing logic"
+Here is the diff:
+@-
+"""
+# This is the sequence of commands that will be executed.
+# 1. `git diff --staged`: Gets the staged changes. !{git diff --staged}
+# 2. `gemini ...`: Pipes the diff to the Gemini model with the prompt above.
+# 3. `git commit -m "$(...)`: Uses the generated message for the commit.
+# 4. `git push`: Pushes the commit to the remote repository.
+command = """
+git add . && \
+git commit -m "$(git diff --staged | gemini -p '@-' '{{prompt}}')" && \
+git push
+"""

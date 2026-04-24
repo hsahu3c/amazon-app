@@ -1,0 +1,260 @@
+<?php
+
+// use MongoDB\BSON\UTCDateTime;
+// use App\Core\Models\User;
+// use Symfony\Component\Console\Command\Command;
+// use Symfony\Component\Console\Input\InputInterface;
+// use Symfony\Component\Console\Output\OutputInterface;
+
+// #[\AllowDynamicProperties]
+// class SalesPerDayCommand extends Command
+// {
+
+//     protected static $defaultName = "order-sales";
+//     protected $di;
+//     protected static $defaultDescription = "To insert the sales inside Sales Container at day end";
+
+//     /**
+//      * Constructor
+//      * Calls parent constructor and sets the di
+//      *
+//      * @param $di
+//      */
+//     public function __construct($di)
+//     {
+//         parent::__construct();
+//         $this->di = $di;
+//     }
+
+//     /**
+//      * Configuration for the command
+//      * Used to set help text and add options and arguments
+//      *
+//      * @return void
+//      */
+//     protected function configure()
+//     {
+//         $this->setHelp('Calculate Per Day Sales Userwise');
+//         // $this->addArgument("days", InputArgument::OPTIONAL, "days", false);
+//     }
+
+//     /**
+//      * The main logic to execute when the command is run
+//      *
+//      * @return int
+//      */
+//     protected function execute($input, $output)
+//     {
+//         $this->output = $output;
+//         $this->input = $input;
+//         $output->writeln('<options=bold;bg=cyan> ➤ </><options=bold;fg=cyan> Calculating per day sales userwise...</>');
+//         $output->writeln("<options=bold;bg=bright-white> ➤ </> .....................");
+
+
+//         // for ($i=90; $i > 0; $i--) { 
+//         //     $preDate = date('Y-m-d', strtotime("-{$i} days"));
+//         //     $currentDate = date('Y-m-d', strtotime('-'.($i-1).' days'));
+//         //     $this->salesPerDay($preDate, $currentDate);
+//         // }
+
+//         $preDate = date('Y-m-d', strtotime('-1 days'));
+//         $currentDate = date('Y-m-d');
+//         $this->salesPerDay($preDate, $currentDate);
+//         return 0;
+//     }
+
+//     /**
+//      * salesPerDay Function
+//      * To get All Sales userwise and store in sales_container
+//      */
+//     public function salesPerDay($preDate, $currentDate): int
+//     {
+//         $mongo = $this->di->getObjectManager()->create('\App\Core\Models\BaseMongo');
+//         $salesContainer = $mongo->getCollectionForTable('sales_container');
+//         $query = $mongo->getCollectionForTable('order_container');
+//         // $preDate = date('Y-m-d', strtotime('-1 days'));
+//         // $currentDate = date('Y-m-d');
+
+//         $this->output->writeln('<options=bold;bg=yellow> ➤ </><options=bold;fg=yellow> Initating Orders Importing of date : '.$preDate.'</>');
+
+//         $canExecuteOperation = $this->canExecuteOperation($preDate);
+
+//         if($canExecuteOperation)
+//         {
+//             $params = [];
+//             $params[] = [
+//                 '$match' => [
+//                     'object_type' => 'source_order', 
+//                     'source_created_at' => [
+//                         '$gte' => $preDate, 
+//                         '$lt' => $currentDate
+//                     ], 
+//                     'marketplace_currency' => [
+//                         '$ne' => null
+//                     ]
+//                 ]
+//             ];
+//             $params[] = [
+//                 '$addFields' => [
+//                     'orderAmountNumber' => [
+//                         '$toDecimal' => '$total.marketplace_price'
+//                     ]
+//                 ]
+//             ];
+//             $params[] = [
+//                 '$group' => [
+//                     '_id' => [
+//                         'user_id' => '$user_id',
+//                         'shop_id' => '$shop_id'
+//                     ],
+//                     'user_id' => ['$first' => '$user_id'],
+//                     'shop_id' => ['$first' => '$shop_id'],
+//                     'marketplace_id' => ['$first' => '$marketplace_id'],
+//                     'marketplace_currency' => ['$first' => '$marketplace_currency'],
+//                     'orderCount' => ['$sum' => 1],
+//                     'orderAmount' => ['$sum' => '$orderAmountNumber']
+//                 ]
+//             ];
+
+//             $result = $query->aggregate($params, ["typeMap" => ['root' => 'array', 'document' => 'array']])->toArray();
+
+//             $prepareData = [];
+
+//             if (!empty($result)) {
+//                 foreach ($result as $orderData) {
+//                     $index = $orderData['user_id'].'_'.$orderData['shop_id'];
+//                     if (!isset($prepareData[$index])) {
+//                         $prepareData[$index] = [
+//                             'user_id' => $orderData['user_id'],
+//                             'shop_id' => $orderData['shop_id'],
+//                             'marketplace_id' => $this->getAmazonMarketplaceId($orderData['user_id'], $orderData['shop_id']),
+//                             'marketplace_currency' => $orderData['marketplace_currency'],
+//                             'order_count' => $orderData['orderCount'],
+//                             'order_amount' => $orderData['orderAmount'],
+//                             'order_date' => $date = new UTCDateTime(strtotime($preDate) * 1000),
+//                             'created_at' => new UTCDateTime(strtotime(date('c')) * 1000)
+//                         ];   
+//                     }
+
+//                     // break;
+//                 }
+//             }
+
+//             // print_r($prepareData);
+//             if (!empty($prepareData)) {
+//                 $dataToInsert = array_chunk($prepareData, 500);
+//                 foreach ($dataToInsert as $value) {
+//                     $salesContainer->insertMany(array_values($value));
+//                 }
+//                 ;
+//                 $this->output->writeln('<options=bold;bg=green> ➤ </><options=bold;fg=green> '.count($prepareData).' Records Imported Successfully!!</>');
+//             }
+//             else {
+//                 $this->output->writeln('<options=bold;bg=green> ➤ </><options=bold;fg=green> No Orders to be Imported.</>');
+//             }
+//         }
+//         else
+//         {
+//             // die('canExecuteOperation : NO');
+//             $this->output->writeln('<options=bold;bg=red> ➤ </><options=bold;fg=red> Already Imported.</>');
+//         }
+
+//         return 0;
+//     }
+
+//     /*public function salesPerDay()
+//     {
+//         $mongo = $this->di->getObjectManager()->create('\App\Core\Models\BaseMongo');
+//         $salesContainer = $mongo->getCollectionForTable('sales_container');
+//         $query = $mongo->getCollectionForTable('order_container');
+//         $preDate = date('Y-m-d', strtotime('-1 days'));
+//         $currentDate = date('Y-m-d');
+//         $params = [];
+//         $params[] = ['$match' => ['object_type' => 'source_order', 'source_created_at' => ['$gte' => $preDate, '$lt' => $currentDate], 'marketplace_currency' => ['$ne' => null]]];
+//         $params[] = ['$project' => ['_id' => 0, 'user_id' => 1, 'marketplace_currency' => 1, 'total.marketplace_price' => 1, 'source_created_at' => 1]];
+//         $result = $query->aggregate($params, ["typeMap" => ['root' => 'array', 'document' => 'array']])->toArray();
+//         $prepareData = [];
+//         if (!empty($result)) {
+//             foreach ($result as $orderData) {
+//                 if (!isset($prepareData[$orderData['user_id']])) {
+//                     $orderCount = 0;
+//                     $prepareData[$orderData['user_id']] = [
+//                         'user_id' => $orderData['user_id'],
+//                         'currency' => [],
+//                         'order_date' => $preDate,
+//                         'created_at' => date('c'),
+//                         'source_created_at' => $orderData['source_created_at']
+//                     ];
+//                 }
+//                 if (isset($prepareData[$orderData['user_id']]['currency'][$orderData['marketplace_currency']])) {
+//                     $prepareData[$orderData['user_id']]['currency'][$orderData['marketplace_currency']] = (string)($prepareData[$orderData['user_id']]['currency'][$orderData['marketplace_currency']] + $orderData['total']['marketplace_price']);
+//                 } else {
+//                     $prepareData[$orderData['user_id']]['currency'][$orderData['marketplace_currency']] = (string)$orderData['total']['marketplace_price'];
+//                 }
+//                 $orderCount++;
+//                 $prepareData[$orderData['user_id']]['totalOrderCount'] = $orderCount;
+//             }
+//         }
+//         if (!empty($prepareData)) {
+//             $dataToInsert = array_chunk($prepareData, 500);
+//             foreach ($dataToInsert as $value) {
+//                 $salesContainer->insertMany(array_values($value));
+//             };
+//             $this->output->writeln('<options=bold;bg=green> ➤ </><options=bold;fg=green> Userwise Sales Inserted Successfully!!</>');
+//             return 0;
+//         }
+//     }*/
+
+//     public function getAmazonMarketplaceId($user_id, $shop_id)
+//     {
+//         $cache_key = "amazon_marketplace_id_{$user_id}_{$shop_id}";
+//         $cached_app_info = $this->di->getCache()->get($cache_key);
+//         if($cached_app_info) {
+//             return $cached_app_info;
+//         }
+//         $userModel = User::findFirst([['user_id' => $user_id, 'shops._id' => $shop_id]]);
+//         if($userModel) {
+//             $user = $userModel->toArray();
+
+//             foreach($user['shops'] as $shop) {
+//                 if($shop['_id'] == $shop_id) {
+//                     $marketplaceId = $shop['warehouses'][0]['marketplace_id'];
+
+//                     $this->di->getCache()->set($cache_key, $marketplaceId);
+//                     return $marketplaceId;
+//                 }
+//             }
+//         }
+//         else {
+//             return false;
+//         }
+//     }
+
+//     public function canExecuteOperation($date): bool
+//     {
+//         $mongo = $this->di->getObjectManager()->create('\App\Core\Models\BaseMongo');
+//         $dailyCron = $mongo->getCollectionForTable('amazon_daily_cron');
+
+//         $query = [
+//             'user_id' => 'all',
+//             'shop_id' => 'all',
+//             'process_name' => 'daily_orders_report',
+//             'data' => $date
+//         ];
+//         $result = $dailyCron->find($query, ['typeMap' => ['root' => 'array', 'document' => 'array']])->toArray();
+
+//         if(empty($result)) {
+//             $resp = $dailyCron->insertOne([
+//                 'user_id'       => 'all',
+//                 'shop_id'       => 'all',
+//                 'process_name'  => 'daily_orders_report',
+//                 'data'          => $date,
+//                 'created_at'    => new UTCDateTime(strtotime(date('c')) * 1000)
+//             ]);
+//             // print_r($resp);
+
+//             return true;
+//         }
+//         return false;
+//     }
+// }

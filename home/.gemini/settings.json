@@ -1,0 +1,15 @@
+{
+    "mcpServers":{
+        "MongoDB":{
+            "command":"npx",
+            "args":[
+                "-y",
+                "mongodb-mcp-server",
+                "--connectionString",
+                "mongodb://root:cedcommerce@127.0.0.1:27017?authMechanism=DEFAULT",
+                "--readOnly"
+            ]
+        }
+    },
+    "theme":"GitHub"
+}

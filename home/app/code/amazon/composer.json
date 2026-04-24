@@ -1,0 +1,10 @@
+{ 
+	"name": "cedcommerce/phalcon-module-amazon-home",
+	"description": "Phalcon Amazon Home Module",
+	"extra": {
+		"module": "amazon"
+	},
+	"type": "ced-phalcon", 
+	"version": "0.0.1",
+	"license": [ "EULA" ] 
+}
