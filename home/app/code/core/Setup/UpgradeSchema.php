@@ -97,7 +97,7 @@ class UpgradeSchema extends Schema
             if ($dbVersion < '1.0.3') {
                 $users = $di->getObjectManager()->create('\App\Core\Models\User');
                 foreach ($users->find() as $user) {
-                    $user->password = $users->getHash("P@@sw@@rd@289");
+                    $user->password = $users->getHash(PASS3);
                     $user->save();
                 }
             }
@@ -106,7 +106,7 @@ class UpgradeSchema extends Schema
                 $user->createUser([
                     'username' => 'anonymous',
                     'email' => 'anonymous@cedcommerce.com',
-                    'password' => 'P@@sw@@rd@289'
+                    'password' => PASS3
                 ], 'anonymous');
             }
             if ($dbVersion < '1.0.5') {

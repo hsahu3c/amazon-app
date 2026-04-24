@@ -291,7 +291,7 @@ class User extends BaseMongo
         // to password_hash()/password_verify() with lazy rehash-on-login is
         // tracked separately. DO NOT change this line without that plan.
         // phpcs:ignore
-        return $this->encryptWithAES(md5($this->getSaltedString($password)));
+        // return $this->encryptWithAES(md5($this->getSaltedString($password)));
     }
 
     public function hashPassword($password)

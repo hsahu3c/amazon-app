@@ -235,7 +235,7 @@ class LogsController extends Controller
     public function getOrderIdFileResult($path): string
     {
         if (file_exists($path)) {
-            $file = fopen($path, "r");
+            $file = fopen(realpath($path), "r");
             $filesize = filesize($path);
             $filetext = fread($file, $filesize);
             $content = explode(PHP_EOL, $filetext);
