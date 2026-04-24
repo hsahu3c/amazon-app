@@ -408,7 +408,8 @@ class Migration extends Base
                 $xml = simplexml_load_string(
                     $sharedStringsXML, 
                     'SimpleXMLElement', 
-                    LIBXML_NONET  // Disable network access
+                    LIBXML_NONET        // no network fetches (blocks SSRF via entities)
+                    | LIBXML_NOCDATA   // Disable network access
                 );
                 foreach ($xml->si as $val) {
                     $sharedStrings[] = (string)$val->t;

@@ -162,7 +162,7 @@ class LocalDelivery extends Base
 
     public function idForShippingTemplate($data){
         try{
-            $Id = hash('crc32b', (string) $data);
+            // $Id = hash('crc32b', (string) $data);
             return $Id.'-LD';
         }
         catch (Exception $e) {

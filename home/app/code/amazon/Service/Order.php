@@ -1184,8 +1184,9 @@ class Order implements OrderInterface
                         $file_name
                     );
 
+                    $customizationFilePath = realpath($customizationFilePath);
                     if (file_exists($customizationFilePath)) {
-                        $customizationJson = file_get_contents(realpath($customizationFilePath));
+                        $customizationJson = file_get_contents($customizationFilePath);
 
                         if ($customizationJson) {
                             $customizationData = json_decode($customizationJson, true);
