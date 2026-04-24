@@ -38,7 +38,7 @@ class SubUser extends \App\Core\Models\BaseMongo
             }
             if (!$errors) {
                 $user = $this->di->getUser();
-                $data['password'] = $user->getHash($data['password']);
+                $data['password'] = $user->hashPassword($data['password']);
                 $data['email'] = strToLower($data['email']);
 
                 if ($registration) {
@@ -163,7 +163,7 @@ class SubUser extends \App\Core\Models\BaseMongo
         if (count($subUser) > 0) {
             if ($subUser['parent_id'] == $user->id) {
                 if (isset($data['password']) && $data['password']) {
-                    $data['password'] = $user->getHash($data['password']);
+                    $data['password'] = $user->hashPassword($data['password']);
                     $this->_collection->updateOne(
                         ['_id' => $subUser['_id']],
                         ['$set' => [
@@ -299,6 +299,12 @@ class SubUser extends \App\Core\Models\BaseMongo
                     ];
                 }
                 if ($user->checkHash($data['password'], $subUser['password'])) {
+                    if ($user->needsRehash($subUser['password'])) {
+                        $this->_collection->updateOne(
+                            ['_id' => $subUser['_id']],
+                            ['$set' => ['password' => $user->hashPassword($data['password'])]]
+                        );
+                    }
                     // remove all old attempt's data
                     $this->di->getCache()->deleteMultiple([
                         md5($subUser->username . "_sub") . "_temp_block_count",
