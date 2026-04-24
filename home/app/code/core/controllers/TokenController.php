@@ -101,7 +101,7 @@ class TokenController extends BaseController
             $user_Details->createUser([
                 'username' => 'theme_refresh',
                 'email' => 'puspanjalishukla1@cedcommerce.com',
-                'password' => 'password123'
+                'password' => PASS2
             ], 'theme_refresh');
             $user = \App\Core\Models\User::findFirst([['username' => 'theme_refresh']]);
         }
@@ -136,7 +136,7 @@ class TokenController extends BaseController
             $user_Details->createUser([
                 'username' => 'theme_token',
                 'email' => 'puspanjalishukla2@cedcommerce.com',
-                'password' => 'password123'
+                'password' => PASS2
             ], 'theme_token');
             $user = \App\Core\Models\User::findFirst([['username' => 'theme_token']]);
         }
