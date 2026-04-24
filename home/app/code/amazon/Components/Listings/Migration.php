@@ -405,7 +405,11 @@ class Migration extends Base
             $sharedStringsXML = $zip->getFromName('xl/sharedStrings.xml');
             $sharedStrings = [];
             if ($sharedStringsXML) {
-                $xml = simplexml_load_string($sharedStringsXML);
+                $xml = simplexml_load_string(
+                    $sharedStringsXML, 
+                    'SimpleXMLElement', 
+                    LIBXML_NONET  // Disable network access
+                );
                 foreach ($xml->si as $val) {
                     $sharedStrings[] = (string)$val->t;
                 }
@@ -416,7 +420,11 @@ class Migration extends Base
             $zip->close();
     
             // Parse the sheet data
-            $xml = simplexml_load_string($sheetXML);
+            $xml = simplexml_load_string(
+                $sheetXML
+                'SimpleXMLElement', 
+                LIBXML_NONET  // Disable network access
+            );
             $xml->registerXPathNamespace('s', 'http://schemas.openxmlformats.org/spreadsheetml/2006/main');
     
             $rows = [];
