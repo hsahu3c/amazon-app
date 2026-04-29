@@ -10,11 +10,11 @@
     "aws/aws-sdk-php": "^3.133",
     "symfony/string": "5.4",
     "symfony/console": "5.4",
-    "firebase/php-jwt": "^6.10"
+    "firebase/php-jwt": "^6.11.2"
   },
-  "autoload" : {
+  "autoload": {
     "psr-4": {
-      "Generation\\Wrapper\\" : "generation/"
+      "Generation\\Wrapper\\": "generation/"
     }
   }
 }
