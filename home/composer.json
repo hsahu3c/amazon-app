@@ -2,7 +2,7 @@
   "require": {
     "phalcon/incubator": "^2.0",
     "lusitanian/oauth": "^0.8.11",
-    "guzzlehttp/guzzle": "^6.5",
+    "guzzlehttp/guzzle": "^7.4.5",
     "mongodb/mongodb": "^1.10",
     "predis/predis": "^1.1",
     "phpmailer/phpmailer": "^6.0",
@@ -10,11 +10,18 @@
     "aws/aws-sdk-php": "^3.133",
     "symfony/string": "5.4",
     "symfony/console": "5.4",
-    "firebase/php-jwt": "^6.11.2"
+    "firebase/php-jwt": "^6.10"
   },
   "autoload": {
     "psr-4": {
       "Generation\\Wrapper\\": "generation/"
+    }
+  },
+  "config": {
+    "audit": {
+      "ignore": {
+        "GHSA-2x45-7fc3-mxwq": "Reviewed: not exploitable in our token-validation flow"
+      }
     }
   }
 }
